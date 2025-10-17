@@ -45,8 +45,15 @@ title: "Mahmoud Sunbul"
    control-loop latency.
 
 ---
-## Selected Paper
-  - **[Consensus-Driven Adaptive Signal Control](/portfolio/projects/consensus-signal-control/)** — scalable multi-intersection coordination; 57% delay reduction.
+<div style="font-size:1rem; margin-top:20px;">
+  <strong>Selected Paper</strong>
+  <ul style="list-style-type: none; padding-left: 0;">
+    <li>
+      <strong><a href="/portfolio/projects/consensus-signal-control/">Consensus-Driven Adaptive Signal Control</a></strong> — scalable multi-intersection coordination; 57% delay reduction.
+    </li>
+  </ul>
+</div>
+
 ---
 ## Selected Projects
   - **[UR10e Wave-Mimic Testbed](/portfolio/projects/ur10e/)** — hardware-in-the-loop wave playback for controller validation.  
