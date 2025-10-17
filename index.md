@@ -38,3 +38,6 @@ I develop optimization-based control and state-estimation methods—MPC with con
 - **[UR10e Wave-Mimic Testbed](/portfolio/projects/ur10e/):** hardware-in-the-loop disturbance playback for controller evaluation.  
 - See all: **[Projects](/portfolio/projects/)**.
 
+- - **[UR10e Wave-Mimic Testbed](/portfolio/projects/ur10e/)**
+
+
