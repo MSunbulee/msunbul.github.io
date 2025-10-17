@@ -18,16 +18,12 @@ header_pages:
 
 
 collections_dir: portfolio
-
 collections:
   projects:
     output: true
     permalink: /portfolio/projects/:name/
 
 defaults:
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: page
+  - scope:{path: "",type: "projects"}
+    values: {layout: page}
 
