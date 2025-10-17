@@ -14,7 +14,8 @@ plugins:
   - jekyll-sitemap
 
 header_pages:
+  - contact.md
   - index.md
   - cv.md
-  - contact.md
+  
   
