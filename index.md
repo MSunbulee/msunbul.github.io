@@ -11,7 +11,7 @@ B.S. Electrical Engineering, KFUPM (’24)
 
 <div style="margin:10px 0;">
   <a href="mailto:your.name@purdue.edu">Email</a> ·
-  <a href="/assets/cv/msunbul_Resume.pdf" target="_blank">CV (PDF)</a> ·
+  <a href="/assets/cv/msunbul_Resume.pdf" target="_blank">CV (PDF)</a>
   <a href="https://www.linkedin.com/in/YOUR_HANDLE/">LinkedIn</a> ·
   <a href="https://github.com/MSunbulee">GitHub</a>
 </div>
