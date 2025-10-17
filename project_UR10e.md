@@ -4,6 +4,13 @@ title: "UR10e Wave-Mimic Testbed"
 permalink: /projects/ur10e/
 ---
 
+<div style="display:flex; justify-content:flex-end; gap:15px; margin-bottom:10px;">
+  <a href="/portfolio/" style="font-weight:600; text-decoration:none; border:1px solid #ccc; padding:6px 12px; border-radius:6px;">🏠 Home / Portfolio</a>
+  <a href="/projects/" style="font-weight:600; text-decoration:none; border:1px solid #ccc; padding:6px 12px; border-radius:6px;">📂 All Projects</a>
+</div>
+
+---
+
 **Affiliation:** KAUST RISC Lab (2024) — with Prof. Shinkyu Park  
 **Role:** Lead Design & Integration  
 **Keywords:** URScript, hardware-in-the-loop, adaptive control, experimental validation  
@@ -74,12 +81,6 @@ Mention collaborators, supervisors, lab funding, or institutional support.
 - [GitHub Repository](#)
 
 ---
-- [Portfolio Overview](/portfolio/)  
-- [Project Page](/projects/)  
-
-
----
 
 ## Media
 *(Add figures, GIFs, or short video embeds)*
-
