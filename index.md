@@ -4,16 +4,33 @@ title: "Home"
 ---
 
 # Mahmoud Sunbul
+
+<span style="font-size:0.95rem; line-height:1.4;">
+Faculty Member (on leave), KFUPM — Electrical Engineering Department  
 M.S. Robotics, Purdue University (’26 expected)  
-Faculty Member (on leave), KFUPM — Robotics & Control  
-[Email](mailto:YOUR_EMAIL) · [CV (PDF)](/assets/cv/Mahmoud_Sunbul_CV.pdf) · [LinkedIn](https://www.linkedin.com/in/YOUR_HANDLE/) · [GitHub](https://github.com/YOUR_USERNAME)
+B.S. Electrical Engineering, KFUPM (’24)
+</span>
 
-<img src="/assets/img/me.jpg" alt="Mahmoud Sunbul" width="180" style="border-radius:12px;margin:12px 0;">
+<div style="margin:10px 0;">
+  <a href="mailto:your.name@purdue.edu">Email</a> ·
+  <a href="/cv/">CV (PDF)</a> ·
+  <a href="https://www.linkedin.com/in/YOUR_HANDLE/">LinkedIn</a> ·
+  <a href="https://github.com/MSunbulee">GitHub</a>
+</div>
 
-**Research focus (≤90 words):**  
+<img src="/assets/img/me.jpg" alt="Mahmoud Sunbul" width="160" style="float:right; margin:0 0 12px 18px; border-radius:12px;">
+
+## Research focus
 I develop optimization-based control and state-estimation methods—MPC with control-barrier guarantees and adaptive disturbance modeling—to keep robots safe and effective in uncertain, human environments. My work integrates planning, control, and perception through reproducible pipelines from simulation → bench → hardware.
 
-**Highlights**
-- UR10e wave-mimic testbed for hardware-in-the-loop disturbance studies  
-- 3-D palm-canopy meshing workflow (stereo vs depth; vertex density bench)  
-- Consensus-driven adaptive signal control (↓ wait time 57%, ↓ max delay 53%)
+## Projects
+- **UR10e Wave-Mimic Testbed** — Hardware-in-the-loop disturbance profiles for controller evaluation.  
+  <a href="/projects/ur10e/">Project page →</a>
+
+- **3-D Palm-Canopy Meshing** — Stereo vs. depth capture; pipeline from capture → preprocess → mesh.  
+  <a href="/projects/palm-mesh/">Project page →</a>
+
+- **Consensus-Driven Adaptive Signal Control** — Reduces average wait and worst-case delay in simulation.  
+  <a href="/projects/traffic-consensus/">Project page →</a>
+
+<div style="clear:both;"></div>
