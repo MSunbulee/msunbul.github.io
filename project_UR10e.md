@@ -11,83 +11,99 @@ permalink: /projects/ur10e/
 
 ---
 
-**Affiliation:** KAUST RISC Lab (2024) — with Prof. Shinkyu Park  
+**Affiliation:** KAUST RISC Lab (Summer 2025) — with Prof. Shinkyu Park  
 **Role:** Lead Design & Integration  
+**Collaboration:** Ali Al Nasser — joint experimental study and paper  
 **Keywords:** URScript, hardware-in-the-loop, adaptive control, experimental validation  
 
 ---
 
 ## Abstract / Overview
-This project developed an **experimental testbed for time-varying 1D disturbances** using a **UR10e manipulator**.  
-The system enables **controller validation for underwater vehicle dynamics** by reproducing wave-like motion profiles in the lab—reducing costly, time-consuming underwater tests.  
-Seven periodic trajectories were generated with adjustable amplitude and speed (up to **0.5 m displacement** and **0.65 m/s velocity**), exported via URScript, and validated in **ROS2** and **URSim**.  
-This platform bridges theoretical control design with real-world hardware evaluation, providing a **reusable benchmark** for disturbance testing.
+This project built an **experimental testbed for time-varying 1D disturbances** using a **UR10e manipulator**, enabling **controller validation for underwater vehicles** under repeatable wave-like motion.  
+Seven periodic velocity profiles (sinusoidal, triangular, composite) were implemented with adjustable amplitude and frequency, exported through URScript, and validated in **ROS 2** and **URSim**.  
+The setup serves as a **hardware-in-the-loop benchmark**, bridging theoretical control design with quantitative real-world validation.
 
 ---
 
 ## 1. Introduction
-Ocean environments introduce nonlinear, time-varying disturbances that challenge the stability of underwater control systems.  
-Repeated field testing is costly, risky, and provides limited accuracy due to noisy underwater sensing.  
-This project aimed to replicate these conditions in a **controlled laboratory setting**, allowing validation of underwater controllers without submersion.
+Underwater robotics faces challenges from unpredictable wave disturbances and costly field trials.  
+The goal was to reproduce these dynamics safely within a lab environment—allowing controllers to be tested, tuned, and verified before deployment.  
+This platform provides a **scalable, low-cost, and accurate means of replicating ocean-like motion** on-demand.
 
 ---
 
 ## 2. Methodology
 
 ### 2.1 System Overview
-- **Hardware:** UR10e 6-DoF industrial manipulator acting as a programmable disturbance generator.  
-- **Software:** ROS 2 for motion recording, URSim for offline verification, URScript for trajectory execution.  
-- **Deliverable:** Modular trajectory generator producing configurable motion profiles for controller tests.
+- **Hardware:** UR10e 6-DoF robot arm as a programmable disturbance generator.  
+- **Software:** ROS 2 for data logging, URSim for verification, URScript for trajectory execution.  
+- **Deliverable:** Stand-alone, autonomous setup that requires **no ROS experience**—users can directly load motion profiles, generate new ones, and run tests without prior configuration.
 
-### 2.2 Trajectory Design
-- Planned **velocity trajectories** (sinusoidal, triangular, and composite forms).  
-- Integrated velocity to predict **position trajectories**.  
-- Validated using recorded vs. planned position data.  
-- Used the metric \( E = \tfrac{1}{N}\sum_{i=1}^{N}\|\hat{\mathbf{p}}_i - \mathbf{p}_i\|_2 \) to quantify error.
+### 2.2 Trajectory Generation
+Velocity profiles \( v(t) \) were designed for multiple modes (sin, square, triangular).  
+Positions \( p(t) \) were obtained by integrating \( v(t) \) over time.  
+Planned and measured positions were compared using the root-mean-square error:
+
+<div align="center">
+\[
+E = \sqrt{\frac{1}{N}\sum_{i=1}^{N}\|\hat{\mathbf{p}}_i - \mathbf{p}_i\|^2}
+\]
+</div>
+
+where \( \hat{\mathbf{p}}_i \) is the commanded position and \( \mathbf{p}_i \) is the recorded one.  
+This metric quantified trajectory fidelity and mechanical repeatability.
 
 ### 2.3 Implementation
-- Generated URScript files executed directly on UR10e.  
-- Recorded joint-space positions and end-effector paths using ROS topics.  
-- Verified synchronization between commanded and measured motion.
+- Trajectories exported as URScript files and executed on the UR10e controller.  
+- ROS 2 used for synchronized motion capture and position logging.  
+- Results cross-validated in URSim before running on hardware.
 
 ---
 
 ## 3. Results
-- Achieved high-fidelity wave reproduction with < 1 cm average tracking error.  
-- Real-time loop latency remained below **10 ms**.  
-- Validated multiple disturbance modes with **repeatable performance** across trials.  
 
-<div style="text-align:center;">
-  <img src="/assets/img/ur10e_setup.jpg" width="420px" alt="UR10e experimental setup">
-  <p><em>Figure 1. Experimental setup for time-varying 1D disturbance generation.</em></p>
+<div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center;">
+  <img src="/assets/img/ur10e_planned_position.png" width="340px" alt="Planned position profile">
+  <img src="/assets/img/ur10e_planned_velocity.png" width="340px" alt="Planned velocity profile">
+  <img src="/assets/img/ur10e_ros_recorded.png" width="340px" alt="ROS recorded position">
+  <img src="/assets/img/ur10e_ros_vs_commanded.png" width="340px" alt="Comparison of planned vs recorded">
 </div>
+
+<p style="text-align:center; margin-top:8px;"><em>Figures 1–4. Planned position, planned velocity, recorded trajectories, and comparison results.</em></p>
 
 ---
 
 ## 4. Discussion
-The setup successfully provided a controllable, verifiable disturbance source for evaluating adaptive and robust controllers.  
-Key challenges included maintaining safety at high-speed motion and handling velocity discontinuities.  
-The platform’s modular design makes it extendable to 3D motion and other robotic arms.
+The setup reproduced time-varying disturbances with high positional accuracy and temporal consistency.  
+Its **autonomous design** enables non-ROS users to run experiments directly, generate new profiles, and validate their controllers with minimal setup effort.  
+This accessibility makes it an excellent educational and benchmarking tool for motion-control research.  
+
+Key challenges included:
+- Maintaining safety at high-speed oscillations  
+- Synchronizing commanded and recorded signals  
+- Automating setup to ensure ease of use without manual calibration
 
 ---
 
 ## 5. Conclusion
-The **UR10e Wave-Mimic Testbed** establishes a practical middle ground between simulation and full-scale field testing.  
-It enables reproducible, safe, and quantitatively validated controller evaluation under realistic wave dynamics.  
-Future work will automate trajectory generation for arbitrary disturbance spectra and extend the benchmark to multi-axis motion.
+The **UR10e Wave-Mimic Testbed** provides a reliable and reusable experimental platform for validating control algorithms under dynamic wave-like disturbances.  
+It eliminates the cost and complexity of underwater trials while preserving key motion characteristics.  
+Future development will extend it to **multi-axis motion** and integrate **automated profile tuning**.
 
 ---
 
 ## 6. References / Documentation
 - [Poster (PDF)](/assets/docs/Poster.pdf)  
-- [URScript Control Repository](#)  
-- [ROS 2 Dataset](#)  
-- [Project Hub / Report](#)
+- [URScript Generator Repository](#)  
+- [ROS Dataset & Analysis Notebook](#)  
+- [Joint Paper with Ali Al Nasser (under review)](#)
 
 ---
 
 ## 7. Acknowledgments
-Thanks to **Prof. Shinkyu Park**, **Ali Al Nasser**, and all **RISC Lab** members for their continuous support and feedback.
+Grateful to **Prof. Shinkyu Park** for the opportunity to join the **RISC Lab** during Summer 2025,  
+and to **Ali Al Nasser** for close collaboration throughout this project.  
+Thanks also to all **RISC Lab members** and the **SSI team** for coordinating and supporting the summer research program.
 
 ---
 
@@ -95,13 +111,12 @@ Thanks to **Prof. Shinkyu Park**, **Ali Al Nasser**, and all **RISC Lab** member
 - 🎥 [Demo Video — Wave Playback on UR10e](#)  
 - 🎥 [Simulation Video (URSim Verification)](#)  
 - 🖼️ [Image Gallery](#)  
-- 📄 [Poster (PDF)](/assets/docs/Poster.pdf)
+- 📄 [Full Poster (PDF)](/assets/docs/Poster.pdf)
 
 ---
 
 ## Media
-<div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center;">
-  <img src="/assets/img/ur10e_wave_demo.gif" width="360px" alt="UR10e wave playback">
-  <img src="/assets/img/ur10e_ros_capture.png" width="360px" alt="ROS2 position recording">
-  <img src="/assets/img/ur10e_poster_preview.jpg" width="360px" alt="Poster preview">
+<div style="text-align:center;">
+  <img src="/assets/docs/Poster.jpg" width="700px" alt="Poster: Experimental setup for Time-Varying 1D Disturbance">
+  <p><a href="/assets/docs/Poster.pdf" style="font-weight:600;">View full poster →</a></p>
 </div>
