@@ -16,7 +16,8 @@ B.S. Electrical Engineering, KFUPM (’24)
   <a href="https://github.com/MSunbulee">GitHub</a>
 </div>
 
-<img src="/assets/img/me.jpg" alt="Mahmoud Sunbul" width="160" style="float:right; margin:0 0 12px 18px; border-radius:12px;">
+<img src="/portfolio/assets/images/mahmoud.PNG" alt="Mahmoud Sunbul" width="160" style="float:right; margin:0 0 12px 18px; border-radius:12px;">
+
 
 ## Research focus
 I develop optimization-based control and state-estimation methods—MPC with control-barrier guarantees and adaptive disturbance modeling—to keep robots safe and effective in uncertain, human environments. My work integrates planning, control, and perception through reproducible pipelines from simulation → bench → hardware.
