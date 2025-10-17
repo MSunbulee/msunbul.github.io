@@ -2,21 +2,30 @@
 layout: page
 title: ""
 ---
-# Mahmoud Sunbul
-<span style="font-size:0.95rem; line-height:1.4;">
-Faculty Member (on leave), KFUPM — Electrical Engineering Department  
-M.S. Robotics, Purdue University (’26 expected)  
-B.S. Electrical Engineering, KFUPM (’24)
-</span>
 
-<div style="margin:10px 0;">
-  <a href="mailto:your.name@purdue.edu">Email</a> ·
-  <a href="/portfolio/assets/cv/msunbul_Resume.pdf" target="_blank">CV (PDF)</a>
-  <a href="https://www.linkedin.com/in/YOUR_HANDLE/">LinkedIn</a> ·
-  <a href="https://github.com/MSunbulee">GitHub</a>
+<div style="display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap;">
+  <div style="flex:1; min-width:280px;">
+
+  # Mahmoud Sunbul
+  <span style="font-size:0.95rem; line-height:1.4;">
+  Faculty Member (on leave), KFUPM — Electrical Engineering Department  
+  M.S. Robotics, Purdue University (’26 expected)  
+  B.S. Electrical Engineering, KFUPM (’24)
+  </span>
+
+  <div style="margin:10px 0;">
+    <a href="mailto:your.name@purdue.edu">Email</a> ·
+    <a href="/portfolio/assets/cv/msunbul_Resume.pdf" target="_blank">CV (PDF)</a> ·
+    <a href="https://www.linkedin.com/in/YOUR_HANDLE/">LinkedIn</a> ·
+    <a href="https://github.com/MSunbulee">GitHub</a>
+  </div>
+
+  </div>
+
+  <div style="flex:0 0 auto; margin-left:20px;">
+    <img src="/portfolio/assets/images/mahmoud.PNG" alt="Mahmoud Sunbul" width="180" style="border-radius:12px; margin-top:5px;">
+  </div>
 </div>
-
-<img src="/portfolio/assets/images/mahmoud.PNG" alt="Mahmoud Sunbul" width="160" style="float:right; margin:0 0 12px 18px; border-radius:12px;">
 
 
 ## Research focus
