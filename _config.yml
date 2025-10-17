@@ -52,3 +52,4 @@ defaults:
 header_pages:
   - index.md             # home page
   - projects.md   # optional listing page for all projects
+  - project_UR10e.md
