@@ -19,4 +19,3 @@ permalink: /portfolio/projects/ur10e/
 (brief metrics)
 
 ## Media
-![Overlay](/portfolio/assets/images/ur10e/profile-overlay.png)
