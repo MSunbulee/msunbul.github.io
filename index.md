@@ -1,3 +1,7 @@
+---
+layout: home
+title: "Home"
+---
 # Mahmoud Sunbul
 
 <span style="font-size:0.95rem; line-height:1.4;">
