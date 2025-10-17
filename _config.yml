@@ -15,5 +15,19 @@ plugins:
 
 header_pages:
   - index.md
-  
-  
+
+
+collections_dir: portfolio
+
+collections:
+  projects:
+    output: true
+    permalink: /portfolio/projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: page
+
