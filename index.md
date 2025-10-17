@@ -6,8 +6,6 @@ title: "Mahmoud Sunbul"
 <div style="display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap;">
   <div style="flex:1; min-width:280px;">
 
-  <h1 style="font-size:2.1rem; font-weight:700; margin:0;">Mahmoud Sunbul</h1>
-
   <div style="font-size:0.95rem; line-height:1.4; margin-top:4px;">
     <p style="margin:0;">Faculty Member (on leave), KFUPM — Electrical Engineering Department</p>
     <p style="margin:0;">M.S. Robotics, Purdue University (’26 expected)</p>
