@@ -1,8 +1,14 @@
+# ===========================
+# Site Info
+# ===========================
 title: ""
 description: ""
-url: "https://msunbulee.github.io"
+url: "https://msunbulee.github.io"   # your site URL
 theme: minima
 
+# ===========================
+# Minima Theme Settings
+# ===========================
 minima:
   skin: classic
   social_links:
@@ -11,27 +17,38 @@ minima:
     - platform: linkedin
       user_url: "https://www.linkedin.com/in/msunbul/"
 
+# ===========================
+# Plugins
+# ===========================
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  # - jekyll-redirect-from   # optional, only if you want stub→redirect links later
+  # - jekyll-redirect-from   # uncomment if you want redirect pages
 
-# IMPORTANT: collections live under /portfolio
+# ===========================
+# Collections
+# ===========================
+# Tell Jekyll where to look for collections (inside /portfolio/)
 collections_dir: portfolio
 
 collections:
   projects:
     output: true
-    permalink: /projects/:name/
+    permalink: /portfolio/projects/:name/
 
-# Ensure each project actually renders as a page
+# ===========================
+# Defaults for Collections
+# ===========================
 defaults:
   - scope:
-      path: ""
-      type: "projects"
+      path: ""           # applies to entire site
+      type: "projects"   # applies only to items in _projects
     values:
-      layout: page
+      layout: page       # ensures each project renders as a page
 
-# Navbar (keep or edit as you like)
+# ===========================
+# Header Navigation
+# ===========================
 header_pages:
-  - index.md
+  - index.md             # home page
+  - projects.md   # optional listing page for all projects
