@@ -39,8 +39,8 @@ I develop optimization-based control and state-estimation methods—MPC with con
 
 ## Projects
 - **UR10e Wave-Mimic Testbed** — Hardware-in-the-loop disturbance profiles for controller evaluation.  
-  <a href="/portfolio/projects
-/ur10e.md">Project page →</a>
+  <a href="/portfolio/projects/ur10e/" target="_blank">Project page →</a>
+
 
 - **3-D Palm-Canopy Meshing** — Stereo vs. depth capture; pipeline from capture → preprocess → mesh.  
   <a href="/projects/palm-mesh/">Project page →</a>
