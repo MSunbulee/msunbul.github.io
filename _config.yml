@@ -22,7 +22,7 @@ collections_dir: portfolio
 collections:
   projects:
     output: true
-    permalink: /portfolio/projects/:name/
+    permalink: /projects/:name/
 
 # Ensure each project actually renders as a page
 defaults:
