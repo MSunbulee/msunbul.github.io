@@ -14,22 +14,25 @@ minima:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  # - jekyll-redirect-from   # optional; uncomment if you use `redirect_from` in pages
+  # - jekyll-redirect-from   # optional; uncomment if you use redirects
 
-header_pages:
-  - index.md
-  # - cv.md
-  # - contact.md
-
-collections_dir: portfolio
+# NEW: Collections
 collections:
   projects:
     output: true
     permalink: /portfolio/projects/:name/
 
+# (Optional) Defaults so you don’t repeat front matter
 defaults:
   - scope:
       path: ""
-      type: projects
+      type: "projects"
     values:
-      layout: page
+      layout: page          # reuse Minima’s page layout
+      nav_exclude: true     # don’t put individual projects in header nav
+      toc: false
+
+# Header nav (top bar)
+header_pages:
+  - index.md
+  - portfolio/projects/index.md   # <- add a listing page for Projects
