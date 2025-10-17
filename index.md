@@ -56,6 +56,12 @@ title: "Mahmoud Sunbul"
 
 ---
 
-<div style="text-align:center; margin-top:28px;">
-  <a href="/portfolio/projects/" style="font-weight:600; text-decoration:none; border:1px solid #ccc; padding:10px 18px; border-radius:8px; display:inline-block; font-size:0.95rem;">📂 View All Projects</a>
+<div style="text-align:center; margin-top:32px;">
+  <a href="/portfolio/projects/"
+     style="font-weight:600; text-decoration:none; border:1px solid #bbb;
+            padding:10px 18px; border-radius:8px; display:inline-block;
+            font-size:0.95rem; background:#f9f9f9;">
+     📂 View All Projects
+  </a>
 </div>
+
