@@ -15,7 +15,5 @@ plugins:
 
 header_pages:
   - index.md
-  - projects.md
-  - publications.md
-  - media.md
-  - about.md
+  - cv.md
+  - contact.md
