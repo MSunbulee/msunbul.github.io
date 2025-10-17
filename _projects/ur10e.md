@@ -1,6 +1,7 @@
 ---
+layout: page
 title: "UR10e Wave-Mimic Testbed"
-blurb: "Hardware-in-the-loop disturbance profiles for controller evaluation."
+permalink: /portfolio/projects/ur10e/
 ---
 
 **Affiliation:** KAUST RISC Lab (2024) — with Prof. Shinkyu Park  
