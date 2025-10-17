@@ -49,3 +49,9 @@ I develop optimization-based control and state-estimation methods—MPC with con
   <a href="/projects/traffic-consensus/">Project page →</a>
 
 <div style="clear:both;"></div>
+
+{% for p in site.projects %}
+- **{{ p.title }}** — {{ p.blurb }}  
+  <a href="{{ p.url | relative_url }}" target="_blank">Project page →</a>
+{% endfor %}
+
