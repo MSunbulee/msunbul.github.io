@@ -12,7 +12,6 @@ permalink: /portfolio/projects/ur10e/
 1–2 sentences: What gap/limitation are you solving?
 
 ## Approach
-How you tackled it (pipeline or architecture in 3–5 bullets):
 - Velocity-profile generator (7 periodic profiles; adjustable amplitude/speed/shape)
 - URScript export + ROS2 logging
 - Bench harness for repeatable runs
