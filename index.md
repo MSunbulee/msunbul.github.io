@@ -16,12 +16,15 @@ title: ""
 
 
 
-  <div style="margin:10px 0;">
-    <a href="mailto:your.name@purdue.edu">Email</a> ·
+  <div style="margin:10px 0; font-size:0.95rem;">
+    <a href="https://msunbulee.github.io/portfolio/contact/" target="_blank">Contact</a> ·
     <a href="/portfolio/assets/cv/msunbul_Resume.pdf" target="_blank">CV (PDF)</a> ·
-    <a href="https://www.linkedin.com/in/YOUR_HANDLE/">LinkedIn</a> ·
-    <a href="https://github.com/MSunbulee">GitHub</a>
+    <a href="https://www.linkedin.com/in/msunbul/" target="_blank">LinkedIn</a> ·
+    <a href="https://github.com/MSunbulee" target="_blank">GitHub</a>
+    <br>
+    <strong>Email:</strong> mahmoud.sunbul@kfupm.edu.sa <span style="color:#777;">(easier to contact)</span>
   </div>
+
 
   </div>
 
