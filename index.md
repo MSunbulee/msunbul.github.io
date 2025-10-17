@@ -41,10 +41,12 @@ I work on safe motion for autonomous systems by integrating motion planning, sta
 <div style="font-size:1rem; margin-top:20px;">
   <ul style="list-style-type: none; padding-left: 0;">
     <li>
-      <strong><a href="/portfolio/projects/consensus-signal-control/">Consensus-Driven Adaptive Signal Control</a></strong> — scalable multi-intersection coordination; 57% delay reduction.
+      <strong><a href="/portfolio/projects/consensus-signal-control/">Consensus-Driven Adaptive Signal Control</a></strong><br>
+      Hybrid two-layer traffic control combining localized consensus with adaptive coordination. Prioritizes near-intersection vehicles to reduce delays, achieving up to 57% improvement while maintaining fairness and scalability.
     </li>
   </ul>
 </div>
+
 
 ---
 ## Selected Projects
