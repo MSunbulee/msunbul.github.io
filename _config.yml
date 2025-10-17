@@ -1,34 +1,17 @@
-url: "https://msunbulee.github.io"
-theme: minima
-
-# Your social + plugins (keep as-is)
-minima:
-  skin: classic
-  social_links:
-    - platform: github
-      user_url: "https://github.com/MSunbulee"
-    - platform: linkedin
-      user_url: "https://www.linkedin.com/in/msunbul/"
-
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
-# IMPORTANT: collections live under /portfolio
-collections_dir: portfolio
+# keep your existing title/description/url/theme/minima/plugins as-is
 
 collections:
   projects:
     output: true
     permalink: /portfolio/projects/:name/
 
-# Ensure items render as real pages
 defaults:
   - scope:
-      path: ""          # applies globally
+      path: ""
       type: "projects"
     values:
-      layout: page
+      layout: page   # ensures each project renders as an HTML page
 
+# Navbar (keep whatever you already have)
 header_pages:
   - index.md
