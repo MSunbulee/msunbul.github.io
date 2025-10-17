@@ -1,5 +1,3 @@
-# Mahmoud Sunbul
-
 <span style="font-size:0.95rem; line-height:1.4;">
 Faculty Member (on leave), KFUPM — Electrical Engineering Department  
 M.S. Robotics, Purdue University (’26 expected)  
