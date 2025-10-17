@@ -1,7 +1,20 @@
-title: ""
-description: ""
 url: "https://msunbulee.github.io"
 theme: minima
+
+# Tell Jekyll that collections live under /portfolio
+collections_dir: portfolio
+
+collections:
+  projects:
+    output: true
+    permalink: /portfolio/projects/:name/
+
+defaults:
+  - scope:
+      path: ""          # applies globally
+      type: "projects"
+    values:
+      layout: page      # ensures a real HTML page is rendered
 
 minima:
   skin: classic
@@ -14,25 +27,6 @@ minima:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  # - jekyll-redirect-from   # optional; uncomment if you use redirects
 
-# NEW: Collections
-collections:
-  projects:
-    output: true
-    permalink: /portfolio/projects/:name/
-
-# (Optional) Defaults so you don’t repeat front matter
-defaults:
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: page          # reuse Minima’s page layout
-      nav_exclude: true     # don’t put individual projects in header nav
-      toc: false
-
-# Header nav (top bar)
 header_pages:
   - index.md
-  - portfolio/projects/index.md   # <- add a listing page for Projects
