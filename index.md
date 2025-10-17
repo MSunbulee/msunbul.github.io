@@ -20,7 +20,7 @@ title: ""
     <a href="https://www.linkedin.com/in/msunbul/" target="_blank">LinkedIn</a> ·
     <a href="https://github.com/MSunbulee" target="_blank">GitHub</a>
     <br>
-    <strong>Email:</strong> mahmoud.sunbul@kfupm.edu.sa <span style="color:#777;">(easier to contact)</span>
+    <strong>Email:</strong> mahmoud.sunbul@kfupm.edu.sa <span style="color:#777;"></span>
   </div>
 
   </div>
