@@ -4,21 +4,35 @@ title: "UR10e Wave-Mimic Testbed"
 permalink: /projects/ur10e/
 ---
 
-**Affiliation:** KAUST RISC Lab (2024) — with Prof. Shinkyu Park
+**Affiliation:** KAUST RISC Lab (2024) — with Prof. Shinkyu Park  
+**Role:** Lead design & integration (solo/lead/team role)  
+**Keywords:** hardware-in-the-loop, URScript, MPC/CBF, validation
 
-**Summary:** A velocity-profile generator for the UR10e that reproduces time-varying ocean-wave disturbances to evaluate controllers on hardware.
+## Problem
+1–2 sentences: What gap/limitation are you solving?
 
-**Your contribution:** Implemented 7 periodic motion profiles (adjustable amplitude, speed, shape) exporting URScript; integrated logging for validation.
+## Approach
+How you tackled it (pipeline or architecture in 3–5 bullets):
+- Velocity-profile generator (7 periodic profiles; adjustable amplitude/speed/shape)
+- URScript export + ROS2 logging
+- Bench harness for repeatable runs
 
-**Key metrics:**
-- Amplitude up to **0.5 m**
-- End-effector speed **0.65 m/s**
+## Your contribution
+Be explicit about *you* (design, implementation, experiments).
+
+## Results (key metrics)
+- Amplitude **0.5 m**; end-effector **0.65 m/s**
 - Jitter **< 5 ms**
-- Fidelity validated via \(E=\tfrac{1}{N}\sum_{i=1}^N \lVert \hat{\mathbf p}_i - \mathbf p_i \rVert_2\)
+- Fidelity via \( E=\tfrac{1}{N}\sum\lVert \hat{\mathbf p}_i-\mathbf p_i\rVert_2 \)
 
-**Artifacts:** [Code](#) · [Dataset](#) · [Video](#) · [Poster](#)
+## Artifacts
+[Code](#) · [Dataset](#) · [Video](#) · [Poster](#)
 
-**Gallery**
-![UR10e setup](/assets/img/ur10e.jpg){: style="max-width:720px; border-radius:12px;" }
+## Media
+![UR10e setup]({{ site.baseurl }}/assets/images/ur10e.jpg){: style="max-width:720px;border-radius:12px;" }
 
-**Reflection:** Reinforced the sim→bench→hardware approach to maintain safety guarantees under realistic disturbances.
+## Lessons
+1 line: what this taught you / how it feeds your PhD goals.
+
+## Next
+Planned extensions (e.g., disturbance identification, adaptive control on-arm).
