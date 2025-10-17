@@ -37,8 +37,8 @@ title: "Mahmoud Sunbul"
 I work on safe motion for autonomous systems by integrating motion planning, state estimation, and control to maintain safety constraints under uncertainty. Robots operating near people and assets must stay safe while meeting objectives despite disturbances and partial observability. My approach combines constraint-aware planning with adaptive, robust control and real-time workspace updates, validated from simulation to hardware using metrics such as constraint-violation rate, tracking error, and control-loop latency.
 
 ---
+## Selected Paper
 <div style="font-size:1rem; margin-top:20px;">
-  <strong>Selected Paper</strong>
   <ul style="list-style-type: none; padding-left: 0;">
     <li>
       <strong><a href="/portfolio/projects/consensus-signal-control/">Consensus-Driven Adaptive Signal Control</a></strong> — scalable multi-intersection coordination; 57% delay reduction.
