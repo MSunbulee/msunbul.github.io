@@ -1,21 +1,7 @@
 url: "https://msunbulee.github.io"
 theme: minima
 
-# Tell Jekyll that collections live under /portfolio
-collections_dir: portfolio
-
-collections:
-  projects:
-    output: true
-    permalink: /portfolio/projects/:name/
-
-defaults:
-  - scope:
-      path: ""          # applies globally
-      type: "projects"
-    values:
-      layout: page      # ensures a real HTML page is rendered
-
+# Your social + plugins (keep as-is)
 minima:
   skin: classic
   social_links:
@@ -27,6 +13,22 @@ minima:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# IMPORTANT: collections live under /portfolio
+collections_dir: portfolio
+
+collections:
+  projects:
+    output: true
+    permalink: /portfolio/projects/:name/
+
+# Ensure items render as real pages
+defaults:
+  - scope:
+      path: ""          # applies globally
+      type: "projects"
+    values:
+      layout: page
 
 header_pages:
   - index.md
