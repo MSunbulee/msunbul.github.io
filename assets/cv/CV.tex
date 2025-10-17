@@ -1,0 +1,110 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+\usepackage{multicol}
+
+% Page settings
+\geometry{margin=1in}
+
+% Colors
+\definecolor{sectioncolor}{RGB}{0,0,0}
+\definecolor{linkcolor}{RGB}{0,0,255}
+
+% Section formatting
+\titleformat{\section}{\Large\bfseries\color{sectioncolor}}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+% Hyperref
+\hypersetup{
+  colorlinks=true,
+  linkcolor=linkcolor,
+  filecolor=linkcolor,
+  urlcolor=linkcolor,
+}
+
+% Compact lists + line spacing
+\setlist[itemize]{leftmargin=*, topsep=2pt, itemsep=2.5pt, parsep=0pt} % Increased itemsep for spacing
+\renewcommand{\baselinestretch}{0.97}\normalsize
+
+% Helpers
+\newcommand{\vlinebar}{\textcolor{gray}{\textbf{|}} \hspace{0.5em}}
+\newcommand{\daterange}[1]{\hfill\textit{#1}}
+
+\begin{document}
+
+\begin{center}
+  {\Huge\bfseries Mahmoud Sunbul}\\[-2pt]
+  \small
+  \textbf{Graduate Assistant} \vlinebar \textbf{MS Robotics} \vlinebar \textbf{Electrical Engineering}\\[2pt]
+  \faEnvelope\ \href{mailto:MahmoudSunbulee@gmail.com}{MahmoudSunbulee@gmail.com}
+  \hspace{8mm}\faPhone\ (765) 414-2978
+  \hspace{8mm}\faLinkedin\ \href{https://www.linkedin.com/in/msunbul/}{LinkedIn: Mahmoud Sunbul}
+\end{center}
+\vspace{-4pt}\hrule\vspace{2pt}
+
+\section{Summary}
+Master’s student in Robotics at Purdue University and \textbf{KFUPM-sponsored} faculty member (on leave). Research focus: \textbf{algorithms, optimization, and control for robotics}; 
+
+\section{Education}
+\textbf{Purdue University}, West Lafayette \daterange{May 2026}\\
+MS in Robotics \hfill (Expected)\\[2pt]
+\textbf{King Fahd University of Petroleum and Minerals (KFUPM)}, Dhahran \daterange{Dec 2023}\\
+BS in Electrical Engineering \hfill GPA: 3.8/4.0
+\\
+\textbf{Selected Coursework:}
+Lumped Systems; State Estimation; Motion Planning; System Identification
+
+\section{Research \& Projects}
+\textbf{KAUST, RISC Lab} \daterange{Jun--Aug 2025}\hfill (Supervisor: Prof.\ Shinkyu Park)
+\begin{itemize}
+  \item \textbf{UR10e wave-mimic testbed:} Implemented \textbf{velocity trajectory planning} in \textbf{ROS~2} and \textbf{verified on UR10e hardware}. Built a \textbf{Python motion-profile generator} (7 profile types) with safety checks and user-friendly interface for non-robotics users; supports experimental AUV disturbance testing. \emph{Artifacts:} code/setup notes; see personal site (link below).
+  \vspace{2.5pt}
+  \item \textbf{3D palm-canopy meshing:} Built stereo vs.\ depth workflows; after preprocessing, depth-sensor meshes achieved \textbf{\(\sim\)2.0M vs \(\sim\)0.7M vertices} (stereo). \emph{Cameras:} ZED~2 (stereo); iPhone~16 Pro Max / Google Pixel depth (typ.\ usable range \(\sim\)2.5\,m). Delivered Python pipeline and capture settings for robotics/AI dataset creation.
+\end{itemize}
+
+\vspace{5pt} % Added space between projects
+
+\textbf{Purdue University, MARS Lab} \daterange{Jan--May 2025}\hfill (Supervisor: Prof.\ Yu She)
+\begin{itemize}
+  \item \textbf{Underwater glider AUV modeling:} Designed the vehicle model (dual thrusters, variable ballast) and extended \textbf{ROS~2/Gazebo UUV} physics (buoyancy, thrust, angular dynamics). Integrated and validated behaviors in simulation; coordinated with hardware collaborators for parameter checks.
+\end{itemize}
+
+\vspace{5pt} % Added space between projects
+
+\textbf{KFUPM Research Center} \daterange{Feb--Jun 2023}
+\begin{itemize}
+  \item \textbf{Driver-fatigue detection prototype:} Built a CNN/OpenCV pipeline for eye-closure detection; delivered trained model, evaluation metrics, and deployment criteria.
+\end{itemize}
+
+\vspace{5pt} % Added space between projects
+
+\textbf{Robotic Water Quality Boat (Senior Project, KFUPM)} \daterange{Sep 2022--Dec 2023}
+\begin{itemize}
+  \item Led a 5-person team; autonomous boat with \textbf{pH, GPS, IMU} and RF control. \textbf{Endurance:} \(\sim\)30\,min/charge; \textbf{range:} \(\sim\)0.6\,km; \textbf{power:} \(\sim\)1800\,W. Delivered prototype, demo, report, poster, and videos; managed \(\sim\)\$30k budget.
+\end{itemize}
+
+\section{Publications \& Technical Outputs}
+\begin{itemize}
+  \item \textit{Consensus-Driven Adaptive Signal Control for Scalable Intersection Management} — \textbf{first author, manuscript in preparation}.
+  \item \textit{UR10e Mimicry of Ocean Wave Dynamics for AUV Testing} — \textbf{Manuscript TBD}, \textbf{expected submission \(\sim\)15 Feb} (2nd author).
+\end{itemize}
+
+
+\section{Skills \& Tools}
+\begin{multicols}{2}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Robotics:} ROS~2, Gazebo, CoppeliaSim
+  \item \textbf{Engineering:} MATLAB, Simulink, Python
+\end{itemize}
+\end{multicols}
+
+\vspace{2pt}\hrule\vspace{2pt}
+\small \textit{Public artifacts (code, videos, reports):} \href{https://msunbulee.github.io/portfolio/}{\textbf{Personal site}} \ (\textit{all public files will be listed here}).
+
+\end{document}
