@@ -14,17 +14,14 @@ title: ""
     <p style="margin:0; display:block;">B.S. Electrical Engineering, KFUPM (’24)</p>
   </div>
 
-
-
   <div style="margin:10px 0; font-size:0.95rem;">
     <a href="https://msunbulee.github.io/portfolio/contact/" target="_blank">Contact</a> ·
     <a href="/portfolio/assets/cv/msunbul_Resume.pdf" target="_blank">CV</a> ·
     <a href="https://www.linkedin.com/in/msunbul/" target="_blank">LinkedIn</a> ·
     <a href="https://github.com/MSunbulee" target="_blank">GitHub</a>
     <br>
-    <strong>Email:</strong> mahmoud.sunbul@kfupm.edu.sa <span style="color:#777;"></span>
+    <strong>Email:</strong> mahmoud.sunbul@kfupm.edu.sa <span style="color:#777;">(easier to contact)</span>
   </div>
-
 
   </div>
 
@@ -33,25 +30,11 @@ title: ""
   </div>
 </div>
 
-
 ## Research focus
 I develop optimization-based control and state-estimation methods—MPC with control-barrier guarantees and adaptive disturbance modeling—to keep robots safe and effective in uncertain, human environments. My work integrates planning, control, and perception through reproducible pipelines from simulation → bench → hardware.
 
 ## Projects
-- **UR10e Wave-Mimic Testbed** — Hardware-in-the-loop disturbance profiles for controller evaluation.  
-  <a href="/portfolio/projects/ur10e/" target="_blank">Project page →</a>
-
-
-- **3-D Palm-Canopy Meshing** — Stereo vs. depth capture; pipeline from capture → preprocess → mesh.  
-  <a href="/projects/palm-mesh/">Project page →</a>
-
-- **Consensus-Driven Adaptive Signal Control** — Reduces average wait and worst-case delay in simulation.  
-  <a href="/projects/traffic-consensus/">Project page →</a>
-
-<div style="clear:both;"></div>
-
 {% for p in site.projects %}
-- **{{ p.title }}** — {{ p.blurb }}  
+- **{{ p.title }}** — {{ p.blurb | default: "" }}  
   <a href="{{ p.url | relative_url }}" target="_blank">Project page →</a>
 {% endfor %}
-
