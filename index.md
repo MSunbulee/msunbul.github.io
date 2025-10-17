@@ -30,23 +30,32 @@ title: "Mahmoud Sunbul"
   </div>
 </div>
 
+
 ---
 
 ## Research Focus
-I develop optimization-based control and state-estimation methods—**MPC with control-barrier guarantees** and **adaptive disturbance modeling**—to keep robots safe and effective in uncertain, human environments.  
-My work integrates **planning, control, and perception** through reproducible pipelines that translate theory to practice—from **simulation → bench → hardware**.
+  I work on safe motion for autonomous systems by integrating motion planning, state estimation,
+   and control to maintain safety constraints under uncertainty. Robots operating near people and
+   assets must stay safe while meeting their objectives despite disturbances and partial observability.
+   Ensuring this reliability is central to deploying robots that can share spaces with humans and
+   critical infrastructure. My approach combines constraint-aware planning with adaptive, robust
+   control, using real-time workspace updates to enforce safety around dynamic obstacles, restricted
+   zones, and human motion. I validate each method progressively—from simulation to bench
+   to hardware—using measurable metrics such as constraint-violation rate, tracking error, and
+   control-loop latency.
 
 ---
+## Selcted Paper
 
+- **[Consensus-Driven Adaptive Signal Control](/portfolio/projects/consensus-signal-control/)** — scalable multi-intersection coordination; 57% delay reduction.
+---
 ## Selected Projects
 
-- **[Consensus-Driven Adaptive Signal Control](/portfolio/projects/consensus-signal-control/)** — scalable multi-intersection coordination; 57% delay reduction.  
+
 - **[UR10e Wave-Mimic Testbed](/portfolio/projects/ur10e/)** — hardware-in-the-loop wave playback for controller validation.  
 - **[Palm-Canopy 3-D Meshing Benchmark](/portfolio/projects/palm-canopy-mesh/)** — agricultural perception pipeline comparing stereo vs depth.  
 - **[Underwater Glider AUV Modeling](/portfolio/projects/underwater-glider/)** — MPC-based motion model under wave disturbances.  
 - **[Autonomous Water-Quality Boat (Senior Project)](/portfolio/projects/wq-boat/)** — full-stack autonomous surface robot with GPS/IMU/pH integration.  
-- **[Course Projects](/portfolio/projects/me597as-project/)** — MPC-CBF, manipulator control, industrial robotics integration.  
-- **[Small Projects Hub](/portfolio/projects/small-projects/)** — vision-based fatigue detection, ECG signal processing, ML classifiers.
 
 ---
 
