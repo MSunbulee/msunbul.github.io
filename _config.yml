@@ -7,7 +7,7 @@ collections_dir: portfolio
 collections:
   projects:
     output: true
-    permalink: /portfolio/_projects/:name/
+    permalink: /portfolio/projects/:name/
 
 defaults:
   - scope:
