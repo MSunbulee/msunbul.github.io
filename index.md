@@ -8,11 +8,12 @@ title: ""
 
   <h1 style="font-size:2.1rem; font-weight:700; margin:0;">Mahmoud Sunbul</h1>
 
-  <span style="font-size:0.95rem; line-height:1.4;">
-  Faculty Member (on leave), KFUPM — Electrical Engineering Department  
-  M.S. Robotics, Purdue University (’26 expected)  
-  B.S. Electrical Engineering, KFUPM (’24)
-  </span>
+<div style="font-size:0.95rem; line-height:1.4; margin-top:4px;">
+  <p style="margin:0;">Faculty Member (on leave), KFUPM — Electrical Engineering Department</p>
+  <p style="margin:0;">M.S. Robotics, Purdue University (’26 expected)</p>
+  <p style="margin:0;">B.S. Electrical Engineering, KFUPM (’24)</p>
+</div>
+
 
   <div style="margin:10px 0;">
     <a href="mailto:your.name@purdue.edu">Email</a> ·
