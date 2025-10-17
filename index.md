@@ -45,17 +45,14 @@ title: "Mahmoud Sunbul"
    control-loop latency.
 
 ---
-## Selcted Paper
-
-- **[Consensus-Driven Adaptive Signal Control](/portfolio/projects/consensus-signal-control/)** — scalable multi-intersection coordination; 57% delay reduction.
+## Selected Paper
+  - **[Consensus-Driven Adaptive Signal Control](/portfolio/projects/consensus-signal-control/)** — scalable multi-intersection coordination; 57% delay reduction.
 ---
 ## Selected Projects
-
-
-- **[UR10e Wave-Mimic Testbed](/portfolio/projects/ur10e/)** — hardware-in-the-loop wave playback for controller validation.  
-- **[Palm-Canopy 3-D Meshing Benchmark](/portfolio/projects/palm-canopy-mesh/)** — agricultural perception pipeline comparing stereo vs depth.  
-- **[Underwater Glider AUV Modeling](/portfolio/projects/underwater-glider/)** — MPC-based motion model under wave disturbances.  
-- **[Autonomous Water-Quality Boat (Senior Project)](/portfolio/projects/wq-boat/)** — full-stack autonomous surface robot with GPS/IMU/pH integration.  
+  - **[UR10e Wave-Mimic Testbed](/portfolio/projects/ur10e/)** — hardware-in-the-loop wave playback for controller validation.  
+  - **[Palm-Canopy 3-D Meshing Benchmark](/portfolio/projects/palm-canopy-mesh/)** — agricultural perception pipeline comparing stereo vs depth.  
+  - **[Underwater Glider AUV Modeling](/portfolio/projects/underwater-glider/)** — MPC-based motion model under wave disturbances.  
+  - **[Autonomous Water-Quality Boat (Senior Project)](/portfolio/projects/wq-boat/)** — full-stack autonomous surface robot with GPS/IMU/pH integration.  
 
 ---
 
