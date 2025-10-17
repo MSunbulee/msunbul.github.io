@@ -34,7 +34,7 @@ title: ""
 I develop optimization-based control and state-estimation methods—MPC with control-barrier guarantees and adaptive disturbance modeling—to keep robots safe and effective in uncertain, human environments. My work integrates planning, control, and perception through reproducible pipelines from simulation → bench → hardware.
 
 ## Projects
-{% for p in site.projects %}
-- **{{ p.title }}** — {{ p.blurb | default: "" }}  
-  <a href="{{ p.url | relative_url }}" target="_blank">Project page →</a>
-{% endfor %}
+
+- **[UR10e Wave-Mimic Testbed](/portfolio/projects/ur10e/):** hardware-in-the-loop disturbance playback for controller evaluation.  
+- See all: **[Projects](/portfolio/projects/)**.
+
