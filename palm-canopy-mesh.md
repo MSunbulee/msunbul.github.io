@@ -11,14 +11,13 @@ permalink: /projects/palm-canopy-mesh/
 
 ---
 
-**Affiliation:** KAUST RISC Lab (Summer 2025) — with Prof. Shinkyu Park and Dr. Aigerim Kashkinbayeva  
-**Role:** Developer — Perception Pipeline & Evaluation  
+**Affiliation:** KAUST RISC Lab (Summer 2025) 
 **Keywords:** 3-D reconstruction, stereo vision, LiDAR scanning, agricultural robotics  
 
 ---
 
 ## Abstract / Overview
-In a parallel study at the RISC Lab, I benchmarked two 3-D palm-canopy meshing approaches: a **ZED 2 stereo rig** and an **RGB camera paired with a LiDAR sensor**.  
+At the RISC Lab, I benchmarked two 3-D palm-canopy meshing approaches: a **ZED 2 stereo rig** and an **RGB camera paired with a LiDAR sensor**.  
 Both followed a pipeline of data acquisition, pre-processing, structure-from-motion, multi-view stereo reconstruction, and meshing.  
 Prior to this project I had minimal exposure to 3-D geometry, so it was a deep hands-on learning experience in modeling and evaluation.  
 The benchmark quantified vertex density, area coverage, completeness, manipulator integrability, and deployment effort under varied conditions.  
