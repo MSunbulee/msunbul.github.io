@@ -34,7 +34,7 @@ A selection of eight projects demonstrating my research focus on **optimization-
 **Focus:** Dynamic modeling and control of underwater vehicles subject to wave disturbances.  
 **Contribution:** 6-DOF modeling + MPC in ROS 2/Gazebo; wave-adaptive path tracking.  
 **Metrics:** **35% RMSE reduction** over PID; **< 5 ms** timing jitter.  
-**[→ View Project]([NEED LINK — please share the live URL])**
+**[→ View Project](portfolio/projects/underwater-gladiator/)**
 
 ---
 
