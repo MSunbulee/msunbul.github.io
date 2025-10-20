@@ -87,5 +87,5 @@ Next steps include:
 
 <div style="text-align:center; margin-top:10px;">
   <img src="/portfolio/assets/images/Senior/Near_the_end_group_pic.jpg" width="700" alt="Team photo near final testing" style="border-radius:12px;">
-  <p><em>Final prototype testing during KFUPM Design Expo 2023.</em></p>
+  <p><em>Group project KFUPM Design Expo 2023.</em></p>
 </div>
