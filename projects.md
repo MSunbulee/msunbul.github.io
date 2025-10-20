@@ -31,6 +31,11 @@ A selection of projects demonstrating my research in **optimization-based contro
 
 ---
 
+## Projects
+
+---
+
+
 ## Palm-Canopy 3-D Meshing Benchmark
 **Affiliation:** KAUST RISC Lab (Summer 2025)  
 **Keywords:** 3-D Reconstruction, Stereo Vision, LiDAR Scanning, Agricultural Robotics  
