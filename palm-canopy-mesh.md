@@ -11,7 +11,7 @@ permalink: /projects/palm-canopy-mesh/
 
 ---
 
-**Affiliation:** KAUST RISC Lab (Summer 2025) 
+**Affiliation:** KAUST RISC Lab (Summer 2025)  
 **Keywords:** 3-D reconstruction, stereo vision, LiDAR scanning, agricultural robotics  
 
 ---
@@ -89,28 +89,23 @@ This benchmark informed my later projects on perception-driven control and data-
 
 ---
 
-## 5. References / Documentation
-- [Palm-Tree Mesh Creation Report (PDF)](/assets/docs/Palme_tree_mesh_creating_final_V.pdf)  
-- [Poster (PDF)](/assets/docs/Poster_2.pdf)  
-- [Sample Dataset (ZED vs LiDAR)](#)  
-
----
-
-## 6. Acknowledgments
-With gratitude to **Prof. Shinkyu Park** for the opportunity to join the RISC Lab during Summer 2025, and to **Dr. Aigerim Kashkinbayeva** for mentorship throughout this project.  
+## 5. Acknowledgments
+With gratitude to **Prof. Shinkyu Park** for the opportunity to join the RISC Lab during Summer 2025, and to **Dr. Aigerim** for mentorship throughout this project.  
 Special thanks to all **RISC Lab members** and the **SSI team** for coordinating and supporting the summer research program.
 
 ---
 
-## 7. Additional Materials
-- 🖼️ [Full Poster (PDF)](/assets/docs/Poster_2.pdf)  
-- 🧾 [Full Technical Report (PDF)](/assets/docs/Palme_tree_mesh_creating_final_V.pdf)  
-- 📸 [Lab Photo Gallery](#)
-
----
-
 ## Media
-<div style="text-align:center;">
-  <img src="/assets/docs/Poster_2.jpg" width="700px" alt="Poster: Palm Tree Mesh Creation Benchmark">
-  <p><a href="/assets/docs/Poster_2.pdf" style="font-weight:600;">View full poster →</a></p>
+
+<div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+  <img src="/portfolio/assets/images/mesh/1.jpg" width="330px" alt="Mahmoud presenting the poster">
+  <img src="/portfolio/assets/images/mesh/2.jpg" width="330px" alt="Palm tree used in experiments">
+</div>
+
+<p style="text-align:center; margin-top:8px;"><em>Figures 5–6. Project poster presentation and experimental palm-tree setup.</em></p>
+
+<div style="text-align:center; margin-top:20px;">
+  <img src="/portfolio/assets/images/mesh/Poster_2.png" width="700px" alt="Poster: Palm-Canopy 3-D Meshing Benchmark">
+  <p><a href="/portfolio/assets/images/mesh/Poster_2.pdf" style="font-weight:600;">View full poster →</a></p>
+  <p><a href="/portfolio/assets/images/mesh/Palme_tree_mesh_Report.pdf" style="font-weight:600;">View detailed documentation →</a></p>
 </div>
