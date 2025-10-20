@@ -46,11 +46,11 @@ Planned and measured positions were compared using the root-mean-square error:
 
 <div align="center">
 \[
-E = \sqrt{\frac{1}{N}\sum_{i=1}^{N}\|\hat{\mathbf{p}}_i - \mathbf{p}_i\|^2}
+E = \frac{1}{N}\sum_{i=1}^{N}\lVert \hat{\mathbf{p}}_i - \mathbf{p}_i \rVert_2
 \]
 </div>
 
-where \( \hat{\mathbf{p}}_i \) is the commanded position and \( \mathbf{p}_i \) is the recorded one.  
+where $ \hat{\mathbf{p}}_i $ is the commanded position and $ \mathbf{p}_i $ is the recorded one.
 This metric quantified trajectory fidelity and mechanical repeatability.
 
 ### 2.3 Implementation
@@ -125,8 +125,8 @@ Thanks also to all **RISC Lab members** and the **SSI team** for coordinating an
 <script>
   window.MathJax = {
     tex: {
-      inlineMath: [['\\(', '\\)']],
-      displayMath: [['\\[', '\\]']]
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['\\[', '\\]'], ['$$','$$']]
     },
     svg: { fontCache: 'global' }
   };
