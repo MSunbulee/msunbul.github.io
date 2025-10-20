@@ -6,106 +6,152 @@ permalink: /projects/consensus-signal-control/
 
 <div style="display:flex; justify-content:flex-end; gap:15px; margin-bottom:10px;">
   <a href="/portfolio/" style="font-weight:600; text-decoration:none; border:1px solid #ccc; padding:6px 12px; border-radius:6px;">🏠 Home / Portfolio</a>
-  <a href="/projects/" style="font-weight:600; text-decoration:none; border:1px solid #ccc; padding:6px 12px; border-radius:6px;">📂 All Projects</a>
+  <a href="{{ site.baseurl }}/projects/" style="font-weight:600; text-decoration:none; border:1px solid #ccc; padding:6px 12px; border-radius:6px;">📂 All Projects</a>
 </div>
 
 ---
 
-**Keywords:** consensus control, adaptive signal coordination, traffic optimization, scalability  
+**Keywords:** consensus control, adaptive signal coordination, traffic optimization, scalability
 
 ---
 
-## Abstract / Overview
-This study introduces a **hybrid two-layer signal control architecture** that integrates **localized consensus-based communication** with **centralized adaptive phase selection** to manage intersections efficiently under mixed traffic conditions.  
-The approach employs a **front-priority weighted average consensus algorithm**, emphasizing vehicles nearest to intersections to enhance responsiveness. Structured through an **Extended Chain topology**, it eliminates communication bottlenecks while maintaining constant message load regardless of traffic density.  
-Simulations demonstrate a **57.1% reduction in average waiting time** and a **53.3% reduction in worst-case delay**, validating the method’s scalability and robustness across 100 one-hour runs.
+## Abstract
+We propose a hybrid **two-layer traffic signal controller** that fuses a **distributed vehicle consensus layer** with a **central adaptive phase selector**. A **front-priority weighted average consensus** emphasizes vehicles nearest the stop line, and an **Extended Chain** topology provides low-latency cross-approach communication without full connectivity. Across 100 one-hour runs, the best configuration (Average Consensus + Extended Chain) reduces **average waiting time by 57.1%** and **worst-case delay by 53.3%** relative to a global-information baseline, while maintaining competitive throughput and fairness.
 
 ---
 
-## 1. Introduction
-Urban intersections suffer from inefficiencies in traditional centralized signal systems that rely on static timing and global observability. As cities transition to **mixed traffic**—combining human-driven, connected, and automated vehicles—signal control must adapt to uncertainty and limited connectivity.  
-This work addresses these challenges through a **decentralized, scalable coordination framework**, bridging data-driven consensus algorithms with adaptive traffic control logic.
+## 1. Formulation (Key Equations)
+
+**Per-vehicle and average waiting time**
+\[
+W_i = t_i^{\mathrm{dep}} - t_i^{\mathrm{arr}},
+\qquad
+\overline{W} = \frac{1}{N}\sum_{i=1}^{N} W_i.
+\]
+
+**Maximum waiting time**
+\[
+W^{\max} = \max_{i} W_i.
+\]
+
+**Jain’s fairness index** (queues per approach \(q_d\), directions set \(D\))
+\[
+J = \frac{\left(\sum_{d\in D} q_d\right)^2}{|D|\sum_{d\in D} q_d^2}, \quad J\in[0,1].
+\]
+
+**Priority score for movement \((d,m)\)**
+\[
+S_{d,m} = \alpha\,n_{d,m} \;+\; \beta\,w_d^{\max} \;+\; \gamma\,\bar{w}_d,
+\]
+with \(n_{d,m}\) (queue), \(\bar{w}_d\) (avg wait), \(w_d^{\max}\) (max wait), and tuned \(\alpha,\beta,\gamma\).
+
+**Adaptive green time (selected non-conflicting set \(\mathcal{M}\))**
+\[
+Q=\sum_{(d,m)\in\mathcal{M}} n_{d,m},\quad
+\bar{w}=\frac{\sum_{(d,m)\in\mathcal{M}} \bar{w}_d\,n_{d,m}}{\max(Q,1)},
+\]
+\[
+r=\min\!\Bigl(1,\tfrac{Q/|\mathcal{M}|}{10}\Bigr),\quad
+u=\min\!\Bigl(1,\tfrac{\bar{w}}{30}\Bigr),\quad
+\phi=0.7\,r+0.3\,u,
+\]
+\[
+T_{\mathrm{green}} = T_{\min} + \phi\,(T_{\max}-T_{\min}).
+\]
 
 ---
 
-## 2. Methodology
+## 2. Architecture (Concise)
+- **Distributed Consensus Layer:** vehicles exchange queue/wait data under a specified topology; we study **Centralized**, **Chain**, **Chain + Front-Priority**, and **Extended Chain**.
+- **Adaptive Controller:** consumes the aggregated (consensus) summary and selects phases/green durations via the scores above.
 
-### 2.1 Architecture
-The proposed system features two cooperative layers:
-1. **Distributed Consensus Layer:** Connected vehicles share queue and delay data through neighbor-to-neighbor communication governed by topology.  
-2. **Adaptive Control Layer:** A central controller uses the aggregated consensus information to determine signal phases and green durations based on real-time demand.
-
-This design achieves near-optimal control with constant computational and communication cost, even as vehicle count scales.
-
-### 2.2 Consensus Algorithms
-Four algorithmic families were evaluated:
-- **Average Consensus** — smooth convergence and delay minimization.  
-- **Max-Consensus (FloodMax)** — high throughput but fairness trade-offs.  
-- **Event-Triggered Consensus** — efficient under bandwidth limits.  
-- **Front-Priority Weighted Consensus** — prioritizes front vehicles to improve responsiveness.  
-
-### 2.3 Communication Topologies
-Four topologies were tested:
-- **Centralized (Global Info)** — ideal reference model.  
-- **Chain** — local V2V communication within each lane.  
-- **Chain + Front Priority** — adds weighted messaging from front vehicles.  
-- **Extended Chain** — introduces cross-links among leading vehicles, enabling rapid, low-latency updates across directions.
-
----
-
-## 3. Results
-
-<div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center;">
-  <img src="/assets/img/consensus_topologies.png" width="340px" alt="Consensus communication topologies">
-  <img src="/assets/img/consensus_metrics_radar.png" width="340px" alt="Performance metrics radar chart">
-  <img src="/assets/img/consensus_boxplot.png" width="340px" alt="Box plot of average waiting times">
-  <img src="/assets/img/consensus_heatmap.png" width="340px" alt="Heatmap of consensus-topology performance">
+<div style="text-align:center; margin:10px 0 0;">
+  <img src="/portfolio/assets/images/consensus-signal-control/vehicle_topology_mode_1_fully_connected.png" width="650" alt="Fully connected / centralized topology schematic">
+  <p style="margin-top:6px;"><em>Figure 1 — Fully connected (ideal) topology, used as a performance reference.</em></p>
 </div>
 
-<p style="text-align:center; margin-top:8px;"><em>Figures 1–4. Comparison of topologies and consensus variants across performance metrics.</em></p>
+---
 
-**Quantitative Highlights:**
-- **Average Consensus + Extended Chain:**  
-  - ↓ 57.1 % average waiting time  
-  - ↓ 53.3 % maximum waiting time  
-  - Constant controller message load (independent of vehicle count)  
-- **Max-Consensus + Centralized:** +8.9 % throughput, but +58.9 % waiting time (delay-throughput trade-off)  
-- **Event-Triggered + Chain:** Balanced performance with minimal communication (≈ 159 msgs/hr)  
+## 3. Main Results
 
-The Extended Chain topology consistently achieved the best mean and variance—**5.96 ± 0.19 s** average delay vs. **13.9 ± 0.64 s** baseline.
+### 3.1 One-Table Summary (100 × 1-hour episodes)
+
+<table style="width:100%; border-collapse:collapse; font-size:0.98rem;">
+  <thead>
+    <tr>
+      <th style="border-bottom:1px solid #ccc; text-align:left;">Configuration</th>
+      <th style="border-bottom:1px solid #ccc; text-align:right;">Avg. Wait (s)</th>
+      <th style="border-bottom:1px solid #ccc; text-align:right;">Max Wait (s)</th>
+      <th style="border-bottom:1px solid #ccc; text-align:right;">Throughput (veh/hr)</th>
+      <th style="border-bottom:1px solid #ccc; text-align:right;">Fairness (J)</th>
+      <th style="border-bottom:1px solid #ccc; text-align:right;">Δ Avg Wait vs Baseline</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Baseline — Global Info (Centralized)</td>
+      <td style="text-align:right;">13.90 ± 0.64</td>
+      <td style="text-align:right;">118.25 ± 21.11</td>
+      <td style="text-align:right;">3332 ± 479</td>
+      <td style="text-align:right;">0.519 ± 0.146</td>
+      <td style="text-align:right;">—</td>
+    </tr>
+    <tr>
+      <td><strong>Average Consensus — Extended Chain</strong></td>
+      <td style="text-align:right;"><strong>5.96 ± 0.19</strong></td>
+      <td style="text-align:right;"><strong>55.22 ± 6.95</strong></td>
+      <td style="text-align:right;">3191 ± 325</td>
+      <td style="text-align:right;">0.482 ± 0.170</td>
+      <td style="text-align:right;"><strong>−57.1 %</strong></td>
+    </tr>
+    <tr>
+      <td>Max-Consensus — Centralized</td>
+      <td style="text-align:right;">22.10 ± 1.09</td>
+      <td style="text-align:right;">186.39 ± 30.10</td>
+      <td style="text-align:right;"><strong>3627 ± 703</strong></td>
+      <td style="text-align:right;"><strong>0.547 ± 0.116</strong></td>
+      <td style="text-align:right;">+58.9 %</td>
+    </tr>
+  </tbody>
+</table>
+
+<p style="margin-top:6px; font-size:0.95rem;">
+<strong>Interpretation.</strong> The proposed <em>Average Consensus + Extended Chain</em> achieves the lowest mean and worst-case delays with small variance, while the centralized Max-Consensus trades significantly higher delay for slightly higher throughput/fairness.
+</p>
+
+### 3.2 Distribution & Cross-metric Comparisons
+
+<div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin-top:8px;">
+  <img src="/portfolio/assets/images/consensus-signal-control/consensus_topology_avg_heatmap_100_runs.png" width="360" alt="Distribution of average waiting times across configurations">
+  <img src="/portfolio/assets/images/consensus-signal-control/consensus_topology_comparison_heatmap_100_runs.png" width="360" alt="Heatmap of cross-metric performance across configurations">
+</div>
+
+<p style="text-align:center; margin-top:6px;">
+  <em>Figures 2–3 — Left: distribution of average waiting times. Right: cross-metric heatmap across consensus–topology pairs.</em>
+</p>
 
 ---
 
-## 4. Discussion
-This work demonstrates that **structured partial connectivity** can outperform full observability by filtering only spatially relevant information.  
-The Extended Chain topology leverages **front-vehicle awareness**, providing real-time responsiveness with bounded message complexity.  
-Event-triggered strategies, though less optimal in absolute delay, offer **superior bandwidth efficiency**, making them ideal for low-infrastructure deployments.  
-These insights support a scalable migration path toward **decentralized, communication-efficient smart intersections**.
-
----
-
-## 5. Conclusion
-The **Consensus-Driven Adaptive Signal Control** framework merges distributed intelligence with centralized adaptivity to address scalability, fairness, and responsiveness.  
-By combining **Average Consensus** algorithms with **spatially structured topologies**, it achieves superior delay reduction and stable operation under realistic communication constraints.  
-This architecture provides a practical blueprint for the next generation of **connected-vehicle traffic management systems**.
+## 4. Discussion (Concise)
+**Structured partial connectivity > full observability.** The Extended Chain’s front-vehicle cross-links deliver the most informative, low-latency signals to the controller without flooding.  
+**Delay vs throughput trade-off.** Max-Consensus (Centralized) pushes capacity but inflates delay; our method prioritizes delay reduction with stable throughput/fairness.  
+**Bandwidth efficiency.** Event-Triggered + Chain (not shown in table) offers strong message efficiency (≈159 msgs/hr) for constrained deployments.
 
 ---
 
 ## References / Documentation
-- [Full Paper (PDF)](/assets/docs/Consensus_Driven.pdf)  
-- [Simulation Repository](#)  
-- [Dataset & Plots (Extended Results)](#)
+- [Full Paper (PDF)](/assets/docs/Consensus_Driven.pdf)
 
 ---
 
-## Acknowledgments
-This research was conducted in collaboration with **KFUPM** and **Purdue University**, under faculty guidance and peer review.  
-Special thanks to the **RISC Lab (KAUST)** for simulation discussions and the reviewers who supported early validation.
-
----
-
-## Media
-<div style="text-align:center;">
-  <img src="/assets/img/consensus_poster_preview.jpg" width="700px" alt="Poster preview: Consensus-Driven Adaptive Signal Control">
-  <p><a href="/assets/docs/Consensus_Driven.pdf" style="font-weight:600;">View full paper →</a></p>
-</div>
+<!-- MathJax (inline $...$ and display \[...\]) -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['\\[', '\\]'], ['$$','$$']]
+    },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
