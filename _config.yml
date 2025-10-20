@@ -1,6 +1,7 @@
 title: ""
 description: ""
 url: "https://msunbulee.github.io"
+baseurl: "/portfolio"     # ← ADD THIS
 theme: minima
 
 minima:
@@ -14,10 +15,10 @@ minima:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  # - jekyll-redirect-from   # optional
 
 # Top navbar: add any project pages you want to appear in the menu
 header_pages:
   - index.md
-  # - portfolio/project_UR10e.md
-  # - portfolio/project_PalmMesh.md
+  # If you want "Research / Projects" in the top nav, add ONE of these:
+  # - projects.md
+  # - projects/index.md
