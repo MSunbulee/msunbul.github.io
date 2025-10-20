@@ -6,13 +6,13 @@ permalink: /projects/ece569-project/
 
 <div style="display:flex; justify-content:flex-end; gap:15px; margin-bottom:10px;">
   <a href="/portfolio/" style="font-weight:600; text-decoration:none; border:1px solid #ccc; padding:6px 12px; border-radius:6px;">🏠 Home / Portfolio</a>
-  <a href="/projects/" style="font-weight:600; text-decoration:none; border:1px solid #ccc; padding:6px 12px; border-radius:6px;">📂 All Projects</a>
+  <a href="{{ site.baseurl }}/projects/" style="font-weight:600; text-decoration:none; border:1px solid #ccc; padding:6px 12px; border-radius:6px;">📂 All Projects</a>
 </div>
 
 ---
 
 **Course:** Introduction to Robotics (ECE 569, Purdue University)  
-**Instructor:** Prof. Patrick
+**Instructor:** Prof. Patrick  
 **Term:** Fall 2024  
 **Role:** Design, Implementation, and Validation  
 **Keywords:** ROS 2, UR manipulators, MoveIt simulation, kinematics, trajectory control  
@@ -43,20 +43,16 @@ This work emphasizes:
 - Integrated trajectory execution with **ROS 2 publishers/subscribers** and visualized real-time motion in **RViz / MoveIt**.
 
 ### 3. Validation & Visualization
-- Achieved end-effector tracking error below **2 mm** across multi-axis motions.  
 - Recorded trajectories to **CSV logs** for post-analysis and generated long-exposure “light-painting” renders for qualitative validation.  
 - Demonstrated stable, repeatable motion under varying trajectory frequencies.
 
----
-
-<div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center;">
-  <img src="/assets/img/lab1_table.png" width="320px" alt="URDF table and robot model">
-  <img src="/assets/img/step6_step2.png" width="320px" alt="UR5 model loaded in RViz">
-  <img src="/assets/img/figure41x.png" width="320px" alt="Trajectory verification plot">
-  <img src="/assets/img/capture3.png" width="320px" alt="Light painting visualization">
+<div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin-top:10px;">
+  <img src="/portfolio/assets/images/ece569/figure41x.png" width="340" alt="Trajectory verification plot">
+  <img src="/portfolio/assets/images/ece569/track%20a%20flyer%20robot%20(frams).png" width="340" alt="Tracking a flyer robot (frames)">
+  <img src="/portfolio/assets/images/ece569/capture%203.png" width="340" alt="Light painting visualization">
 </div>
 
-<p style="text-align:center; margin-top:6px;"><em>Pipeline snapshots — from URDF modeling and RViz visualization to trajectory tracking and light-painting validation.</em></p>
+<p style="text-align:center; margin-top:6px;"><em>Figures 1–3. Trajectory verification, motion tracking frames, and qualitative visualization.</em></p>
 
 ---
 
@@ -72,14 +68,3 @@ This work emphasizes:
 ## Reflection
 This project solidified my understanding of **manipulator control as a full-stack problem**—where geometric modeling, algorithmic design, and empirical validation must cohere.  
 It reinforced my focus on **safe, model-based motion control**, which continues to guide my current research on **constraint-aware autonomy and hardware-validated safety guarantees**.
-
----
-
-## Media
-<div style="text-align:center;">
-  <video width="720" controls poster="/assets/img/figure41x.png">
-    <source src="/assets/videos/ece569_demo.mp4" type="video/mp4">
-    Your browser does not support HTML video.
-  </video>
-  <p><em>Final demonstration — UR arm tracing a smooth 3-D trajectory using PD control and trapezoidal velocity profiles.</em></p>
-</div>
