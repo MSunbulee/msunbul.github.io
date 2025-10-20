@@ -63,7 +63,7 @@ The comparison criteria included:
 
 <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center;">
   <img src="/portfolio/assets/images/mesh/ZED_Result.png" width="340px" alt="ZED 2 mesh reconstruction result">
-  <img src="/portfolio/assets/images/mesh/LiDar_Result.png" width="340px" alt="LiDAR mesh reconstruction result">
+  <img src="/portfolio/assets/images/mesh/LiDar_Result.PNG" width="340px" alt="LiDAR mesh reconstruction result">
 </div>
 
 <p style="text-align:center; margin-top:8px;"><em>Figures 1–2. Comparative reconstruction results from ZED 2 and LiDAR captures.</em></p>
