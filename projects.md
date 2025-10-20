@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Research / Projects"
-permalink: /projects/
+permalink: portfolio/projects/
 ---
 
 {% include top-nav.html %}
