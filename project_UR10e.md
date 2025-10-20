@@ -42,7 +42,7 @@ This platform provides a **scalable, low-cost, and accurate means of replicating
 ### 2.2 Trajectory Generation
 Velocity profiles \( v(t) \) were designed for multiple modes (sin, square, triangular).  
 Positions \( p(t) \) were obtained by integrating \( v(t) \) over time.  
-Planned and measured positions were compared using the root-mean-square error:
+Planned and measured positions were compared using the mean Euclidean error:
 
 <div align="center">
 \[
@@ -50,7 +50,7 @@ E = \frac{1}{N}\sum_{i=1}^{N}\lVert \hat{\mathbf{p}}_i - \mathbf{p}_i \rVert_2
 \]
 </div>
 
-where $ \hat{\mathbf{p}}_i $ is the commanded position and $ \mathbf{p}_i $ is the recorded one.
+where $ \hat{\mathbf{p}}_i $ is the commanded position and $ \mathbf{p}_i $ is the recorded one.  
 This metric quantified trajectory fidelity and mechanical repeatability.
 
 ### 2.3 Implementation
@@ -63,13 +63,24 @@ This metric quantified trajectory fidelity and mechanical repeatability.
 ## 3. Results
 
 <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center;">
-  <img src="/assets/img/ur10e_planned_position.png" width="340px" alt="Planned position profile">
-  <img src="/assets/img/ur10e_planned_velocity.png" width="340px" alt="Planned velocity profile">
-  <img src="/assets/img/ur10e_ros_recorded.png" width="340px" alt="ROS recorded position">
-  <img src="/assets/img/ur10e_ros_vs_commanded.png" width="340px" alt="Comparison of planned vs recorded">
+  <img src="/portfolio/assets/images/ur10e/Python_R.png" width="340px" alt="Planned trajectory (Python)">
+  <img src="/portfolio/assets/images/ur10e/ROS.png" width="340px" alt="Recorded trajectory (ROS)">
 </div>
 
-<p style="text-align:center; margin-top:8px;"><em>Figures 1–4. Planned position, planned velocity, recorded trajectories, and comparison results.</em></p>
+<p style="text-align:center; margin-top:8px;"><em>Figures 1–2. Planned (Python-generated) vs recorded (ROS-captured) trajectories.</em></p>
+
+<div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:15px;">
+  <video width="340" controls>
+    <source src="/portfolio/assets/images/ur10e/Motion3_trail.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+  <video width="340" controls>
+    <source src="/portfolio/assets/images/ur10e/Motion4_trail.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<p style="text-align:center; margin-top:8px;"><em>Videos 1–2. ROS playback of two wave-motion trajectories on the UR10e testbed.</em></p>
 
 ---
 
@@ -92,35 +103,11 @@ Future development will extend it to **multi-axis motion** and integrate **autom
 
 ---
 
-## 6. References / Documentation
-- [Poster (PDF)](/assets/docs/Poster.pdf)  
-- [URScript Generator Repository](#)  
-- [ROS Dataset & Analysis Notebook](#)  
-- [Joint Paper with Ali Al Nasser (under review)](#)
-
----
-
-## 7. Acknowledgments
-Grateful to **Prof. Shinkyu Park** for the opportunity to join the **RISC Lab** during Summer 2025,  
-and to **Ali Al Nasser** for close collaboration throughout this project.  
-Thanks also to all **RISC Lab members** and the **SSI team** for coordinating and supporting the summer research program.
-
----
-
-## 8. Additional Materials
-- 🎥 [Demo Video — Wave Playback on UR10e](#)  
-- 🎥 [Simulation Video (URSim Verification)](#)  
-- 🖼️ [Image Gallery](#)  
-- 📄 [Full Poster (PDF)](/assets/docs/Poster.pdf)
-
----
-
 ## Media
 <div style="text-align:center;">
-  <img src="/assets/docs/Poster.jpg" width="700px" alt="Poster: Experimental setup for Time-Varying 1D Disturbance">
-  <p><a href="/assets/docs/Poster.pdf" style="font-weight:600;">View full poster →</a></p>
+  <img src="/portfolio/assets/images/ur10e/Poster.jpg" width="700px" alt="Poster: Experimental setup for Time-Varying 1D Disturbance">
+  <p><a href="/portfolio/assets/images/ur10e/Poster.pdf" style="font-weight:600;">View full poster →</a></p>
 </div>
-
 
 <script>
   window.MathJax = {
