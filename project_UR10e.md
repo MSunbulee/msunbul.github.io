@@ -105,7 +105,7 @@ Future development will extend it to **multi-axis motion** and integrate **autom
 
 ## Media
 <div style="text-align:center;">
-  <img src="/portfolio/assets/images/ur10e/Poster.jpg" width="700px" alt="Poster: Experimental setup for Time-Varying 1D Disturbance">
+  <img src="/portfolio/assets/images/ur10e/Poster.pdf" width="700px" alt="Poster: Experimental setup for Time-Varying 1D Disturbance">
   <p><a href="/portfolio/assets/images/ur10e/Poster.pdf" style="font-weight:600;">View full poster →</a></p>
 </div>
 
