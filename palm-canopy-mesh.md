@@ -25,12 +25,6 @@ Depth-camera captures achieved ≈ **2.0 M vertices** vs. **0.7 M from the ZED 2
 
 ---
 
-<div style="display:flex; justify-content:flex-end; margin-top:-10px;">
-  <img src="/assets/img/mahmoud_palm_lab.jpg" width="300px" alt="Mahmoud Sunbul with palm tree setup in lab" style="border-radius:12px;">
-</div>
-
----
-
 ## 1. Introduction
 Accurate 3-D reconstruction of vegetation canopies is critical for **harvest path planning, tree health monitoring,** and **pest detection**.  
 Field conditions pose challenges—illumination variance, wind motion, and sensor drift—necessitating a systematic benchmark of capture methods.  
@@ -68,13 +62,11 @@ The comparison criteria included:
 ## 3. Results
 
 <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center;">
-  <img src="/assets/img/palm_zed_mesh.png" width="340px" alt="ZED 2 reconstruction">
-  <img src="/assets/img/palm_iphone_mesh.png" width="340px" alt="LiDAR reconstruction">
-  <img src="/assets/img/palm_detail_compare.png" width="340px" alt="Detail comparison">
-  <img src="/assets/img/palm_mesh_density.png" width="340px" alt="Vertex density chart">
+  <img src="/portfolio/assets/images/mesh/ZED_Result.png" width="340px" alt="ZED 2 mesh reconstruction result">
+  <img src="/portfolio/assets/images/mesh/LiDar_Result.png" width="340px" alt="LiDAR mesh reconstruction result">
 </div>
 
-<p style="text-align:center; margin-top:8px;"><em>Figures 1–4. Comparative results: ZED 2 vs LiDAR capture, mesh detail, and vertex density distribution.</em></p>
+<p style="text-align:center; margin-top:8px;"><em>Figures 1–2. Comparative reconstruction results from ZED 2 and LiDAR captures.</em></p>
 
 Quantitatively, LiDAR meshes reached ~2.0 million vertices and ~2.1 million triangles, compared to 0.7 million vertices from the ZED 2 rig.  
 Visually, LiDAR offered finer surface details and lower background clutter, while ZED maintained greater stability and reproducibility in motion.
@@ -89,9 +81,15 @@ This benchmark informed my later projects on perception-driven control and data-
 
 ---
 
-## 5. Acknowledgments
-With gratitude to **Prof. Shinkyu Park** for the opportunity to join the RISC Lab during Summer 2025, and to **Dr. Aigerim** for mentorship throughout this project.  
-Special thanks to all **RISC Lab members** and the **SSI team** for coordinating and supporting the summer research program.
+## Poster & Documentation
+
+<div style="text-align:center; margin-top:20px;">
+  <img src="/portfolio/assets/images/mesh/Poster_2.png" width="700px" alt="Poster: Palm-Canopy 3-D Meshing Benchmark">
+  <div style="margin-top:10px;">
+    <a href="/portfolio/assets/images/mesh/Poster_2.pdf" style="font-weight:600; text-decoration:none; margin-right:25px;">🖼️ View full poster →</a>
+    <a href="/portfolio/assets/images/mesh/Palme_tree_mesh_Report.pdf" style="font-weight:600; text-decoration:none;">📄 View detailed documentation →</a>
+  </div>
+</div>
 
 ---
 
@@ -102,10 +100,4 @@ Special thanks to all **RISC Lab members** and the **SSI team** for coordinating
   <img src="/portfolio/assets/images/mesh/2.jpg" width="330px" alt="Palm tree used in experiments">
 </div>
 
-<p style="text-align:center; margin-top:8px;"><em>Figures 5–6. Project poster presentation and experimental palm-tree setup.</em></p>
-
-<div style="text-align:center; margin-top:20px;">
-  <img src="/portfolio/assets/images/mesh/Poster_2.png" width="700px" alt="Poster: Palm-Canopy 3-D Meshing Benchmark">
-  <p><a href="/portfolio/assets/images/mesh/Poster_2.pdf" style="font-weight:600;">View full poster →</a></p>
-  <p><a href="/portfolio/assets/images/mesh/Palme_tree_mesh_Report.pdf" style="font-weight:600;">View detailed documentation →</a></p>
-</div>
+<p style="text-align:center; margin-top:8px;"><em>Figures 3–4. Project poster presentation and experimental palm-tree setup.</em></p>
