@@ -6,7 +6,7 @@ permalink: /projects/me597as-autonomous-systems/
 
 <div style="display:flex; justify-content:flex-end; gap:15px; margin-bottom:10px;">
   <a href="/portfolio/" style="font-weight:600; text-decoration:none; border:1px solid #ccc; padding:6px 12px; border-radius:6px;">🏠 Home / Portfolio</a>
-  <a href="/projects/" style="font-weight:600; text-decoration:none; border:1px solid #ccc; padding:6px 12px; border-radius:6px;">📂 All Projects</a>
+  <a href="{{ site.baseurl }}/projects/" style="font-weight:600; text-decoration:none; border:1px solid #ccc; padding:6px 12px; border-radius:6px;">📂 All Projects</a>
 </div>
 
 ---
@@ -20,80 +20,63 @@ permalink: /projects/me597as-autonomous-systems/
 
 ## Overview
 This course emphasized **hands-on development of autonomous robotic behaviors**, integrating perception, localization, planning, and control through the **ROS 2 + Gazebo** ecosystem.  
-Each laboratory progressively built toward a full **autonomous navigation pipeline**, bridging modeling, sensing, and actuation on both simulated and physical platforms.
+Each module contributed to a complete **autonomous navigation pipeline**, bridging modeling, sensing, and actuation on both simulated and physical platforms.
 
 ---
 
-## Task 1 — Robot Kinematics and Odometry
-- Modeled **differential-drive and skid-steer** platforms from first principles.  
-- Implemented forward / inverse kinematics in Python to convert velocity commands ↔ wheel speeds.  
-- Verified **dead-reckoning** accuracy in Gazebo by comparing estimated vs ground-truth poses.  
-- Tuned PID velocity controllers for stable trajectory tracking.
+## Topics Covered
 
-**Outcome:** Established the mathematical basis for all later navigation and control layers.
+### Kinematic Modeling & Odometry
+Formulated **differential-drive** and **skid-steer** motion models from first principles and implemented forward/inverse kinematics in Python.  
+These models formed the foundation for velocity-control design and dead-reckoning pose estimation validated in Gazebo.
 
 ---
 
-## Task 2 — Perception and Mapping
-- Integrated **2-D LIDAR** and **stereo camera** streams through ROS 2 topics.  
-- Implemented **occupancy-grid mapping** using SLAM toolbox; validated map fidelity under noise.  
-- Calibrated sensor transforms (camera ↔ base link ↔ odom) using TF2.  
-- Analyzed map resolution vs loop-closure accuracy to tune computational load.
-
-**Outcome:** Built an environment model supporting real-time localization and planning.
+### Perception & Mapping
+Integrated **2-D LiDAR** and stereo-camera data to build **occupancy-grid maps** via the SLAM Toolbox.  
+Calibrated TF frames among camera, base link, and odometry, and analyzed how map resolution and loop-closure parameters affect fidelity and computation.
 
 ---
 
-## Task 3 — Localization and Path Planning
-- Employed **AMCL (Adaptive Monte Carlo Localization)** for probabilistic pose estimation.  
-- Generated paths with **Dijkstra / A\*** planners, then smoothed using cubic splines.  
-- Created a custom **cost-map** integrating dynamic obstacles detected from LIDAR range data.  
-- Verified convergence under sensor dropout and map drift conditions.
-
-**Outcome:** Achieved robust, repeatable navigation in cluttered indoor environments.
+### Localization & Path Planning
+Implemented **AMCL** for probabilistic localization and designed **Dijkstra/A\***-based planners refined by spline smoothing.  
+Developed a dynamic **cost-map** that incorporated live obstacle data for reliable navigation under noise and drift.
 
 ---
 
-## Task 4 — Autonomous Navigation and Control Integration
-- Combined all subsystems into a single **ROS 2 launch workspace** controlling a TurtleBot3 Burger.  
-- Implemented **behavior-based mission logic**: navigate → detect obstacle → replan → reach goal.  
-- Tuned **velocity controllers** and **local planners (DWB)** for smooth goal convergence.  
-- Logged odometry vs waypoint tracking error (< 3 cm RMS) using rosbag and Python analysis scripts.  
-
-**Outcome:** Completed a full autonomy loop —from perception to planning to actuation—validated both in Gazebo and on physical robots.
-
----
-
-<div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center;">
-  <img src="/assets/img/me597as_mapping.png" width="320px" alt="Occupancy grid mapping in Gazebo">
-  <img src="/assets/img/me597as_nav.png" width="320px" alt="Path planning and AMCL localization visualization">
-  <img src="/assets/img/me597as_robot.png" width="320px" alt="Autonomous navigation on TurtleBot3 hardware">
-</div>
-
-<p style="text-align:center; margin-top:6px;"><em>Mapping, localization, and autonomous navigation results in ROS 2 / Gazebo.</em></p>
-
----
-
-## Core Skills Demonstrated
-- **Kinematic Modeling & Control:** derived motion models and implemented low-level PID loops.  
-- **Perception & SLAM:** sensor fusion for environment mapping and pose estimation.  
-- **Planning & Navigation:** global/local path planning with real-time obstacle avoidance.  
-- **ROS 2 System Engineering:** topic architecture, TF frames, launch configurations.  
-- **Validation & Metrics:** trajectory error analysis, timing logs, and visual debugging.
-
----
-
-## Reflection
-By completing this course, I reinforced a **system-level perspective on autonomy**—how perception, planning, and control co-evolve in a robotic loop.  
-These experiments deepened my intuition for **integration and failure diagnostics**, directly feeding into my research focus on **optimization-based safe motion planning and hardware-validated autonomy**.
+### Integrated Autonomy & Control
+Unified all subsystems into a single **ROS 2 workspace** managing a TurtleBot3 Burger.  
+Implemented behavior-based logic for goal-directed navigation, obstacle handling, and replanning.  
+Tuned local planners (**DWB**) for smooth convergence, achieving < 3 cm RMS tracking error in simulation and hardware.
 
 ---
 
 ## Media
-<div style="text-align:center;">
-  <video width="720" controls poster="/assets/img/me597as_nav.png">
-    <source src="/assets/videos/me597as_demo.mp4" type="video/mp4">
-    Your browser does not support HTML video.
+
+<div style="display:flex; flex-direction:column; align-items:center; gap:18px; margin-top:10px;">
+
+  <img src="/portfolio/assets/images/ME597/P1.png" width="720" alt="Map used for path planning">
+
+  <video width="720" controls>
+    <source src="/portfolio/assets/images/ME597/Task1x.mp4" type="video/mp4">
+    Your browser does not support the video tag.
   </video>
-  <p><em>Final demonstration — Autonomous navigation loop (Perception → Localization → Planning → Control) executed on ROS 2 / Gazebo.</em></p>
+  <p style="text-align:center; margin-top:4px;">
+    <em>Autonomous exploration without a prior map — online mapping and navigation achieving &gt; 90 % coverage in &lt; 5 minutes.</em>
+  </p>
+
+  <video width="720" controls>
+    <source src="/portfolio/assets/images/ME597/Video_A_starx.mov" type="video/quicktime">
+    Your browser does not support the video tag.
+  </video>
+  <p style="text-align:center; margin-top:4px;">
+    <em>A* path-planning demonstration on the generated map.</em>
+  </p>
+
 </div>
+
+---
+
+## Reflection
+Through this course, I gained a **system-level understanding of autonomy**—how perception, planning, and control interact in real time.  
+These experiments strengthened my intuition for **integration, debugging, and failure analysis**, directly supporting my research in **optimization-based safe motion planning and hardware-validated autonomy**.
