@@ -6,7 +6,7 @@ permalink: /projects/ur10e/
 
 <div style="display:flex; justify-content:flex-end; gap:15px; margin-bottom:10px;">
   <a href="/portfolio/" style="font-weight:600; text-decoration:none; border:1px solid #ccc; padding:6px 12px; border-radius:6px;">🏠 Home / Portfolio</a>
-  <a href="/projects/" style="font-weight:600; text-decoration:none; border:1px solid #ccc; padding:6px 12px; border-radius:6px;">📂 All Projects</a>
+  <a href="/portfolio/projects/" style="font-weight:600; text-decoration:none; border:1px solid #ccc; padding:6px 12px; border-radius:6px;">📂 All Projects</a>
 </div>
 
 ---
