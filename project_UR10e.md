@@ -120,3 +120,15 @@ Thanks also to all **RISC Lab members** and the **SSI team** for coordinating an
   <img src="/assets/docs/Poster.jpg" width="700px" alt="Poster: Experimental setup for Time-Varying 1D Disturbance">
   <p><a href="/assets/docs/Poster.pdf" style="font-weight:600;">View full poster →</a></p>
 </div>
+
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
