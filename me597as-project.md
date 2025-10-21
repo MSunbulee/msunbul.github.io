@@ -13,7 +13,6 @@ permalink: /projects/me597as-autonomous-systems/
 
 **Course:** Autonomous Systems (ME 597AS, Purdue University)  
 **Instructor:** Dr. Nina Mahmoudian  **Term:** Fall 2024  
-**Role:** Individual Lab & Project Implementation  
 **Keywords:** ROS 2, Gazebo, Python, Perception, Navigation, Control, Kinematics  
 
 ---
