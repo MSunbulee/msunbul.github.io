@@ -19,7 +19,7 @@ A selection of projects demonstrating my research in **optimization-based contro
 **Keywords:** Distributed Optimization, Consensus Control, Traffic Networks  
 **Summary:** Designed a consensus-based adaptive phase coordination system for multi-intersection traffic control. The method prioritizes near-intersection vehicles while maintaining fairness and scalability.  
 **Results:** Achieved **57.1%** average waiting-time reduction and **53.3%** worst-case delay reduction across **100** one-hour simulations.  
-**[→ View Project](/portfolio/projects/consensus-signal-control/)**
+**[→ View Paper](/portfolio/projects/consensus-signal-control/)**
 
 ---
 
