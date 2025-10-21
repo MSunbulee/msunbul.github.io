@@ -50,7 +50,6 @@ The **Underwater Gladiator** merges these paradigms by integrating **thruster-ba
 - Implemented two controllable DOFs:  
   1. **Linear propulsion (thrust)**,  
   2. **Buoyancy regulation (mass + tank control)**.  
-- Verified the dynamic response using trajectory and velocity tracking logs.  
 - Simulated both **propulsion** and **gliding** modes under realistic drag and water-density conditions.
 
 ---
@@ -89,7 +88,7 @@ The following media demonstrate my core contributions to the project:
 
 ## 4. Discussion
 Integrating propulsion and buoyancy control introduced complex coupling between **mechanics** and **fluid dynamics**.  
-The simulation framework allows testing of adaptive control laws and quantifying **energy-efficiency gains** before hardware implementation.  
+The simulation framework allows testing of controllers before hardware implementation.  
 This work deepened my expertise in **system-level modeling**, **underwater control design**, and **ROS-based modular development**.
 
 ---
