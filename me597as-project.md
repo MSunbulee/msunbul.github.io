@@ -64,13 +64,6 @@ Tuned local planners (**DWB**) for smooth convergence, achieving < 3 cm RMS trac
     <em>Autonomous exploration without a prior map — online mapping and navigation achieving &gt; 90 % coverage in &lt; 5 minutes.</em>
   </p>
 
-  <video width="720" controls>
-    <source src="/portfolio/assets/images/ME597/Video_A_starx.mov" type="video/quicktime">
-    Your browser does not support the video tag.
-  </video>
-  <p style="text-align:center; margin-top:4px;">
-    <em>A* path-planning demonstration on the generated map.</em>
-  </p>
 
 </div>
 
