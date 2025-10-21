@@ -33,7 +33,7 @@ title: "Mahmoud Sunbul"
 ---
 
 ## Research Focus
-I work on safe motion for autonomous systems by integrating motion planning, state estimation, and control to maintain safety constraints under uncertainty. Robots operating near people and assets must stay safe while meeting objectives despite disturbances and partial observability. My approach combines constraint-aware planning with adaptive, robust control and real-time workspace updates, validated from simulation to hardware using metrics such as constraint-violation rate, tracking error, and control-loop latency.
+I study safe motion for autonomous systems by integrating motion planning, state estimation, and control. My focus is on maintaining safety constraints under uncertainty through constraint-aware planning and adaptive, robust control. I validate these systems from simulation to hardware using metrics such as constraint-violation rate, tracking error, and control-loop latency.
 
 ---
 ## Selected Paper
