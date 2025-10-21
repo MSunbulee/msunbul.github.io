@@ -50,7 +50,7 @@ I work on safe motion for autonomous systems by integrating motion planning, sta
 ---
 ## Selected Projects
   - **[UR10e Wave-Mimic Testbed](/portfolio/projects/ur10e/)** — hardware-in-the-loop wave playback for controller validation.
-  - **[Underwater Glider AUV Modeling](/portfolio/projects/underwater-glider/)** — MPC-based motion model under wave disturbances.  
+  - **[Underwater Glider AUV Modeling](/portfolio/projects/underwater-glider/)** — ROS 2-based buoyancy-driven motion control  
   - **[Palm 3-D Meshing Benchmark](/portfolio/projects/palm-canopy-mesh/)**— agricultural perception pipeline comparing stereo vs depth. 
   - **[Autonomous Water-Quality Boat](/portfolio/projects/wq-boat/)** — full-stack autonomous surface robot.  
 
