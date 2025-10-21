@@ -14,14 +14,16 @@ permalink: /projects/consensus-signal-control/
 ---
 
 ## Abstract
-We propose a hybrid **two-layer traffic signal controller** that fuses a **distributed vehicle consensus layer** with a **central adaptive phase selector**. A **front-priority weighted average consensus** emphasizes vehicles nearest the stop line, and an **Extended Chain** topology provides low-latency cross-approach communication without full connectivity. Across 100 one-hour runs, the best configuration (Average Consensus + Extended Chain) reduces **average waiting time by 57.1%** and **worst-case delay by 53.3%** relative to a global-information baseline, while maintaining competitive throughput and fairness.
+We propose a hybrid **two-layer traffic signal controller** that fuses a **distributed vehicle consensus layer** with a **central adaptive phase selector**.  
+A **front-priority weighted average consensus** emphasizes vehicles nearest the stop line, and an **Extended Chain** topology provides low-latency cross-approach communication without full connectivity.  
+Across 100 one-hour runs, the best configuration (Average Consensus + Extended Chain) reduces **average waiting time by 57.1 %** and **worst-case delay by 53.3 %** relative to a global-information baseline, while maintaining competitive throughput and fairness.
 
 <div style="text-align:center; margin:12px 0 6px;">
   <img src="/portfolio/assets/images/consensus-signal-control/First_page.png" width="720" alt="Paper first page preview">
 </div>
 
 <p style="text-align:center; margin:8px 0 18px;">
-  <a href="/assets/docs/Consensus_Driven.pdf" style="font-weight:700; text-decoration:none; border:1px solid #ccc; padding:8px 14px; border-radius:8px; display:inline-block;">📄 View full paper →</a>
+  <a href="/portfolio/assets/docs/Consensus_Driven.pdf" style="font-weight:700; text-decoration:none; border:1px solid #ccc; padding:8px 14px; border-radius:8px; display:inline-block;">📄 View full paper →</a>
 </p>
 
 ---
@@ -70,12 +72,13 @@ We propose a hybrid **two-layer traffic signal controller** that fuses a **distr
 </table>
 
 <p style="margin-top:6px; font-size:0.95rem;">
-<strong>Interpretation.</strong> The proposed <em>Average Consensus + Extended Chain</em> achieves the lowest mean and worst-case delays with small variance, while the centralized Max-Consensus trades significantly higher delay for slightly higher throughput/fairness.
+<strong>Interpretation.</strong>  
+The proposed <em>Average Consensus + Extended Chain</em> achieves the lowest mean and worst-case delays with small variance, while the centralized Max-Consensus trades higher delay for slightly better throughput/fairness.
 </p>
 
 <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin-top:10px;">
-  <img src="/portfolio/assets/images/consensus-signal-control/consensus_topology_avg_heatmap_100_runs.png" width="360" alt="Distribution of average waiting times across configurations">
-  <img src="/portfolio/assets/images/consensus-signal-control/consensus_topology_comparison_heatmap_100_runs.png" width="360" alt="Heatmap of cross-metric performance across configurations">
+  <img src="/portfolio/assets/images/consensus-signal-control/consensus_topology_avg_heatmap_100_runs.png" width="360" alt="Distribution of average waiting times">
+  <img src="/portfolio/assets/images/consensus-signal-control/consensus_topology_comparison_heatmap_100_runs.png" width="360" alt="Cross-metric heatmap">
 </div>
 
 <p style="text-align:center; margin-top:6px;">
@@ -87,49 +90,50 @@ We propose a hybrid **two-layer traffic signal controller** that fuses a **distr
 ## 2. Formulation (Key Equations)
 
 **Per-vehicle and average waiting time**
-\[
+$$
 W_i = t_i^{\mathrm{dep}} - t_i^{\mathrm{arr}}, \qquad
 \overline{W} = \frac{1}{N}\sum_{i=1}^{N} W_i.
-\]
+$$
 
 **Maximum waiting time**
-\[
+$$
 W^{\max} = \max_{i} W_i.
-\]
+$$
 
 **Jain’s fairness index** (queues per approach \(q_d\), directions set \(D\))
-\[
-J = \frac{\left(\sum_{d\in D} q_d\right)^2}{|D|\sum_{d\in D} q_d^2}, \quad J\in[0,1].
-\]
+$$
+J = \frac{(\sum_{d\in D} q_d)^2}{|D|\sum_{d\in D} q_d^2}, \quad J\in[0,1].
+$$
 
 **Priority score for movement \((d,m)\)**
-\[
-S_{d,m} = \alpha\,n_{d,m} \;+\; \beta\,w_d^{\max} \;+\; \gamma\,\bar{w}_d,
-\]
+$$
+S_{d,m} = \alpha n_{d,m} + \beta w_d^{\max} + \gamma \bar{w}_d,
+$$
 with \(n_{d,m}\) (queue), \(\bar{w}_d\) (avg wait), \(w_d^{\max}\) (max wait), and tuned \(\alpha,\beta,\gamma\).
 
 **Adaptive green time (selected non-conflicting set \(\mathcal{M}\))**
-\[
-Q=\sum_{(d,m)\in\mathcal{M}} n_{d,m},\qquad
-\bar{w}=\frac{\sum_{(d,m)\in\mathcal{M}} \bar{w}_d\,n_{d,m}}{\max(Q,1)},
-\]
-\[
-r=\min\!\Bigl(1,\tfrac{Q/|\mathcal{M}|}{10}\Bigr),\quad
-u=\min\!\Bigl(1,\tfrac{\bar{w}}{30}\Bigr),\quad
-\phi=0.7\,r+0.3\,u,
-\]
-\[
+$$
+Q = \sum_{(d,m)\in\mathcal{M}} n_{d,m}, \qquad
+\bar{w} = \frac{\sum_{(d,m)\in\mathcal{M}} \bar{w}_d n_{d,m}}{\max(Q,1)},
+$$
+$$
+r = \min\!\Bigl(1,\frac{Q/|\mathcal{M}|}{10}\Bigr), \quad
+u = \min\!\Bigl(1,\frac{\bar{w}}{30}\Bigr), \quad
+\phi = 0.7\,r + 0.3\,u,
+$$
+$$
 T_{\mathrm{green}} = T_{\min} + \phi\,(T_{\max}-T_{\min}).
-\]
+$$
 
 ---
 
 ## 3. Architecture (Concise)
-- **Distributed Consensus Layer:** vehicles exchange queue/wait data under a specified topology; we study **Centralized**, **Chain**, **Chain + Front-Priority**, and **Extended Chain**.
-- **Adaptive Controller:** consumes the aggregated (consensus) summary and selects phases/green durations via the scores above.
+
+- **Distributed Consensus Layer:** vehicles exchange queue/wait data under a specified topology — **Centralized**, **Chain**, **Chain + Front-Priority**, and **Extended Chain**.  
+- **Adaptive Controller:** consumes aggregated (consensus) summaries and selects phases/green durations via the scores above.
 
 <div style="text-align:center; margin:10px 0 0;">
-  <img src="/portfolio/assets/images/consensus-signal-control/vehicle_topology_mode_1_fully_connected.png" width="650" alt="Fully connected / centralized topology schematic">
+  <img src="/portfolio/assets/images/consensus-signal-control/vehicle_topology_mode_1_fully_connected.png" width="650" alt="Fully connected topology schematic">
   <p style="margin-top:6px;"><em>Fully connected (ideal) topology, used as a performance reference.</em></p>
 </div>
 
@@ -138,21 +142,18 @@ T_{\mathrm{green}} = T_{\min} + \phi\,(T_{\max}-T_{\min}).
 ## 4. Discussion (Concise)
 **Structured partial connectivity > full observability.** The Extended Chain’s front-vehicle cross-links deliver the most informative, low-latency signals to the controller without flooding.  
 **Delay vs throughput trade-off.** Max-Consensus (Centralized) pushes capacity but inflates delay; our method prioritizes delay reduction with stable throughput/fairness.  
-**Bandwidth efficiency.** Event-Triggered + Chain (not shown) offers strong message efficiency (≈159 msgs/hr) for constrained deployments.
+**Bandwidth efficiency.** Event-Triggered + Chain (not shown) offers strong message efficiency (≈ 159 msgs/hr) for constrained deployments.
 
 ---
 
-## References / Documentation
-- [Full Paper (PDF)](/assets/docs/Consensus_Driven.pdf)
-
-<!-- MathJax (inline $...$ and display \[...\]) -->
+<!-- MathJax -->
 <script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['\\[', '\\]'], ['$$','$$']]
-    },
-    svg: { fontCache: 'global' }
-  };
+window.MathJax = {
+  tex: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  },
+  svg: { fontCache: 'global' }
+};
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
