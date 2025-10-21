@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Underwater Gladiator AUV"
-permalink: /projects/underwater-gladiator/
+permalink: /projects/underwater-glider/
 ---
 
 <div style="display:flex; justify-content:flex-end; gap:15px; margin-bottom:10px;">
