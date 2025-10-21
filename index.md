@@ -16,7 +16,6 @@ title: "Mahmoud Sunbul"
     <a href="https://msunbulee.github.io/portfolio/contact/" target="_blank">Contact</a> ·
     <a href="/portfolio/assets/cv/msunbul_Resume.pdf" target="_blank">CV</a> ·
     <a href="https://www.linkedin.com/in/msunbul/" target="_blank">LinkedIn</a> ·
-    <a href="https://github.com/MSunbulee" target="_blank">GitHub</a>
   </div>
 
   <div style="font-size:0.95rem;">
