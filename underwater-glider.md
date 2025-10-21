@@ -13,8 +13,8 @@ permalink: /projects/underwater-glider/
 
 **Affiliation:** Purdue University — MARS Lab (2025)  
 **Advisor:** Prof. Yu She  
-**Collaborators:** Shiraz A., MARS Lab Team  
-**Role:** Mechanical Design & ROS 2 Modeling Lead  
+**Collaborators:** MARS Lab, Shiraz Team  
+**Role:** Mechanical Design & ROS 2 Modeling  
 **Keywords:** AUV, glider mechanics, buoyancy control, ROS 2 simulation, underwater robotics  
 
 ---
