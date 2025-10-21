@@ -15,7 +15,7 @@ title: "Mahmoud Sunbul"
   <div style="margin-top:10px; margin-bottom:6px; font-size:0.95rem; line-height:1.6;">
     <a href="https://msunbulee.github.io/portfolio/contact/" target="_blank">Contact</a> ·
     <a href="/portfolio/assets/cv/msunbul_Resume.pdf" target="_blank">CV</a> ·
-    <a href="https://www.linkedin.com/in/msunbul/" target="_blank">LinkedIn</a> ·
+    <a href="https://www.linkedin.com/in/msunbul/" target="_blank">LinkedIn</a> 
   </div>
 
   <div style="font-size:0.95rem;">
