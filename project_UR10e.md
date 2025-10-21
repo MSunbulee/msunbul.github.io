@@ -20,7 +20,7 @@ permalink: /projects/ur10e/
 
 ## Abstract / Overview
 This project built an **experimental testbed for time-varying 1D disturbances** using a **UR10e manipulator**, enabling **controller validation for underwater vehicles** under repeatable wave-like motion.  
-Seven periodic velocity profiles (sinusoidal, triangular, composite) were implemented with adjustable amplitude and frequency, exported through URScript, and validated in **ROS 2** and **URSim**.  
+Seven periodic velocity profiles were implemented with adjustable amplitude and frequency, exported through URScript, and validated in **ROS 2** and **URSim**.  
 The setup serves as a **hardware-in-the-loop benchmark**, bridging theoretical control design with quantitative real-world validation.
 
 ---
