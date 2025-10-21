@@ -102,7 +102,7 @@ Next, the system will transition toward **embedded buoyancy-actuator integration
 ---
 
 ## Acknowledgments
-Grateful thanks to **Prof. Yu She** and the **MARS Lab** for guidance and collaboration, and to **Shiraz A.** for joint work on mechanical modeling and simulation alignment.
+Grateful thanks to **Prof. Yu She** and the **MARS Lab** for guidance and collaboration, and to **Shiraz** for joint work on mechanical modeling and simulation alignment.
 
 ---
 
