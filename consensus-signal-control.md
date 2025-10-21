@@ -102,19 +102,24 @@ $$
 
 **Jain’s fairness index** (queues per approach \(q_d\), directions set \(D\))
 $$
-J = \frac{(\sum_{d\in D} q_d)^2}{|D|\sum_{d\in D} q_d^2}, \quad J\in[0,1].
+J = \frac{\left(\sum_{d\in D} q_d\right)^2}{|D|\sum_{d\in D} q_d^2}, \quad J \in [0,1].
 $$
 
 **Priority score for movement \((d,m)\)**
 $$
-S_{d,m} = \alpha n_{d,m} + \beta w_d^{\max} + \gamma \bar{w}_d,
+S_{d,m} = \alpha\,n_{d,m} + \beta\,w_d^{\max} + \gamma\,\bar{w}_d.
 $$
-with \(n_{d,m}\) (queue), \(\bar{w}_d\) (avg wait), \(w_d^{\max}\) (max wait), and tuned \(\alpha,\beta,\gamma\).
+
+where  
+- \(n_{d,m}\): queue length for movement \((d,m)\),  
+- \(\bar{w}_d\): average waiting time for approach \(d\),  
+- \(w_d^{\max}\): maximum waiting time for approach \(d\),  
+- \(\alpha, \beta, \gamma\): tuned weight parameters.
 
 **Adaptive green time (selected non-conflicting set \(\mathcal{M}\))**
 $$
 Q = \sum_{(d,m)\in\mathcal{M}} n_{d,m}, \qquad
-\bar{w} = \frac{\sum_{(d,m)\in\mathcal{M}} \bar{w}_d n_{d,m}}{\max(Q,1)},
+\bar{w} = \frac{\sum_{(d,m)\in\mathcal{M}} \bar{w}_d\,n_{d,m}}{\max(Q,1)},
 $$
 $$
 r = \min\!\Bigl(1,\frac{Q/|\mathcal{M}|}{10}\Bigr), \quad
@@ -122,8 +127,9 @@ u = \min\!\Bigl(1,\frac{\bar{w}}{30}\Bigr), \quad
 \phi = 0.7\,r + 0.3\,u,
 $$
 $$
-T_{\mathrm{green}} = T_{\min} + \phi\,(T_{\max}-T_{\min}).
+T_{\mathrm{green}} = T_{\min} + \phi\,(T_{\max} - T_{\min}).
 $$
+
 
 ---
 
