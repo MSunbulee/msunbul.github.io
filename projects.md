@@ -12,8 +12,6 @@ A selection of projects demonstrating my research in **optimization-based contro
 
 ## Research
 
----
-
 ## Consensus-Driven Adaptive Signal Control
 **Affiliation:** Purdue University (2025)  
 **Keywords:** Distributed Optimization, Consensus Control, Traffic Networks  
@@ -33,7 +31,6 @@ A selection of projects demonstrating my research in **optimization-based contro
 
 ## Projects
 
----
 
 
 ## Palm-Canopy 3-D Meshing Benchmark
@@ -63,7 +60,6 @@ A selection of projects demonstrating my research in **optimization-based contro
 
 ## Selected Class Projects
 
----
 
 ## Industrial Robots — IE 574
 **Instructor:** Prof. Yu She **Term:** Spring 2025  
