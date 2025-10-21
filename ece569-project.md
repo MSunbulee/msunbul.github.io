@@ -43,16 +43,19 @@ This work emphasizes:
 - Integrated trajectory execution with **ROS 2 publishers/subscribers** and visualized real-time motion in **RViz / MoveIt**.
 
 ### 3. Validation & Visualization
-- Recorded trajectories to **CSV logs** for post-analysis and generated long-exposure “light-painting” renders for qualitative validation.  
-- Demonstrated stable, repeatable motion under varying trajectory frequencies.
+- Logged trajectories to **CSV files** for quantitative verification and generated **light-exposure trajectory renders** for qualitative assessment.  
+- Demonstrated stable, repeatable end-effector motion under varying trajectory frequencies and controller gains.
 
 <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin-top:10px;">
-  <img src="/portfolio/assets/images/ece569/figure41x.png" width="340" alt="Trajectory verification plot">
-  <img src="/portfolio/assets/images/ece569/track%20a%20flyer%20robot%20(frams).png" width="340" alt="Tracking a flyer robot (frames)">
-  <img src="/portfolio/assets/images/ece569/capture%203.png" width="340" alt="Light painting visualization">
+  <img src="/portfolio/assets/images/ece569/figure41x.png" width="340" alt="Light-exposure trajectory render">
+  <img src="/portfolio/assets/images/ece569/capture%203.png" width="340" alt="Tracking flyer robot frames">
+  <img src="/portfolio/assets/images/ece569/step6_step2.png" width="340" alt="Controller data and performance table">
 </div>
 
-<p style="text-align:center; margin-top:6px;"><em>Figures 1–3. Trajectory verification, motion tracking frames, and qualitative visualization.</em></p>
+<p style="text-align:center; margin-top:6px;">
+  <em>Figures 1–3 — Light-exposure trajectory render, flyer-tracking frames, and control-performance visualization.</em>
+</p>
+
 
 ---
 
